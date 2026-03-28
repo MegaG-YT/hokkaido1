@@ -46,12 +46,12 @@ export function Hero() {
         <div className="mx-auto max-w-6xl flex items-center justify-center gap-4 md:gap-6 text-white whitespace-nowrap" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
           <span className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-wider">新発売</span>
           <span className="border-l border-white/40 h-8 md:h-12" />
-          <span className="flex items-baseline gap-1">
-            <span className="text-[10px] md:text-sm leading-tight">
+          <span className="flex items-center gap-2">
+            <span className="text-[9px] md:text-xs leading-snug text-center">
               <span className="block">建　築</span>
               <span className="block">条件付</span>
             </span>
-            <span className="text-2xl md:text-4xl lg:text-5xl font-bold">全15区画</span>
+            <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-center">全15区画</span>
           </span>
           <span className="border-l border-white/40 h-8 md:h-12" />
           <span className="text-2xl md:text-4xl lg:text-5xl font-bold">
