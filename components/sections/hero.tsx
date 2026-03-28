@@ -37,7 +37,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <p className="mt-2 text-right text-black px-1 whitespace-nowrap" style={{ fontSize: 'clamp(10px, 1.6vw, 22px)', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+      <p className="mt-2 text-right text-black px-1 md:whitespace-nowrap" style={{ fontSize: 'clamp(10px, 1.6vw, 22px)', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
         ※福島市の「立地適正化計画」にて、当計画地は「居住誘導区域」として指定されています。
       </p>
 
