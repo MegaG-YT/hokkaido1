@@ -42,20 +42,20 @@ export function Hero() {
       </p>
 
       {/* Sales banner */}
-      <div className="mt-4 bg-[#635B51] py-4 md:py-5 px-4 md:px-8">
-        <div className="mx-auto max-w-5xl flex items-center justify-center gap-4 md:gap-6 text-white" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-          <span className="text-xl md:text-3xl lg:text-4xl font-bold tracking-wider">新発売</span>
-          <span className="border-l border-white/40 h-8 md:h-12" />
-          <span className="flex items-baseline gap-1">
-            <span className="text-[10px] md:text-xs leading-tight">
+      <div className="mt-4 bg-[#635B51] py-5 md:py-7 px-4 md:px-8">
+        <div className="mx-auto max-w-6xl flex items-center justify-center gap-5 md:gap-8 text-white" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-wider">新発売</span>
+          <span className="border-l border-white/40 h-10 md:h-16" />
+          <span className="flex items-baseline gap-1.5">
+            <span className="text-xs md:text-base leading-tight">
               <span className="block">建　築</span>
               <span className="block">条件付</span>
             </span>
-            <span className="text-xl md:text-3xl lg:text-4xl font-bold">全15区画</span>
+            <span className="text-3xl md:text-5xl lg:text-6xl font-bold">全15区画</span>
           </span>
-          <span className="border-l border-white/40 h-8 md:h-12" />
-          <span className="text-xl md:text-3xl lg:text-4xl font-bold">
-            1,200<span className="text-sm md:text-lg font-normal">万円台</span>〜1,500<span className="text-sm md:text-lg font-normal">万円台</span>
+          <span className="border-l border-white/40 h-10 md:h-16" />
+          <span className="text-3xl md:text-5xl lg:text-6xl font-bold">
+            1,200<span className="text-base md:text-2xl font-normal">万円台</span>〜1,500<span className="text-base md:text-2xl font-normal">万円台</span>
           </span>
         </div>
       </div>
