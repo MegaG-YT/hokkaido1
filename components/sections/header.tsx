@@ -90,7 +90,10 @@ export function Header() {
                 href={`#${item.id}`}
                 className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 overflow-hidden group"
               >
-                <span className="absolute inset-0 bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity -skew-x-12 scale-x-[1.3]" />
+                <span
+                  className="absolute inset-0 bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ transform: "skewX(-12deg) scaleX(1.3)" }}
+                />
                 <span className="relative z-10">{item.label}</span>
               </a>
               {i < NAV_ITEMS.length - 1 && (
