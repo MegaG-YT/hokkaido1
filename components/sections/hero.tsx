@@ -14,11 +14,11 @@ export function Hero() {
         </div>
 
         {/* Center text overlay */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center">
           <div className="flex flex-col items-center w-full">
             {/* Gold banner */}
-            <div className="w-full max-w-2xl md:max-w-3xl bg-[#9e8c5a] py-3 md:py-5 px-6 md:px-10 text-center">
-              <p className="text-white text-sm md:text-lg lg:text-xl tracking-widest" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <div className="w-full max-w-2xl md:max-w-3xl bg-[#9e8c5a] py-4 md:py-6 px-6 md:px-10 text-center">
+              <p className="text-white text-base md:text-2xl lg:text-3xl tracking-widest" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 福島市の将来を牽引する街「泉」という選択※
               </p>
             </div>
