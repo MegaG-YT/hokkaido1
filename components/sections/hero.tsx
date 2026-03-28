@@ -37,7 +37,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <p className="mt-2 text-right text-[17px] text-[var(--brand-text-muted)] px-1 w-[55vw] ml-auto">
+      <p className="mt-2 text-right text-[17px] text-[var(--brand-text-muted)] px-1 max-w-[50vw] ml-auto">
         ※福島市の「立地適正化計画」にて、当計画地は「居住誘導区域」として指定されています。
       </p>
 

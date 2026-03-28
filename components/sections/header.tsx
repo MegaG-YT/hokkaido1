@@ -88,10 +88,10 @@ export function Header() {
             <div key={item.id} className="flex-1 flex items-center">
               <a
                 href={`#${item.id}`}
-                className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 group"
+                className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 group overflow-hidden"
               >
                 <span
-                  className="absolute inset-0 bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute inset-y-0 -left-4 -right-4 bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity -skew-x-12"
                 />
                 <span className="relative z-10">{item.label}</span>
               </a>
