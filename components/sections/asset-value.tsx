@@ -3,7 +3,7 @@ import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 export function AssetValue() {
   return (
-    <>
+    <div className="mt-16">
       <SectionDivider title="資産価値としての可能性" />
       <SectionWrapper id="asset-value">
         <div className="mx-auto max-w-7xl px-4">
@@ -12,6 +12,6 @@ export function AssetValue() {
           </div>
         </div>
       </SectionWrapper>
-    </>
+    </div>
   )
 }
