@@ -4,13 +4,13 @@ export function Hero() {
       <div className="relative">
         <div className="grid grid-cols-3 grid-rows-2 gap-3 md:gap-5">
           {/* Top row */}
-          <div className="h-[180px] md:h-[260px] lg:h-[320px] bg-gray-300 rounded-tl-2xl md:rounded-tl-3xl" />
-          <div className="h-[180px] md:h-[260px] lg:h-[320px] bg-gray-200" />
-          <div className="h-[180px] md:h-[260px] lg:h-[320px] bg-gray-300 rounded-tr-2xl md:rounded-tr-3xl" />
+          <div className="aspect-[3/2] bg-gray-300 rounded-tl-2xl md:rounded-tl-3xl" />
+          <div className="aspect-[3/2] bg-gray-200" />
+          <div className="aspect-[3/2] bg-gray-300 rounded-tr-2xl md:rounded-tr-3xl" />
           {/* Bottom row */}
-          <div className="h-[180px] md:h-[260px] lg:h-[320px] bg-gray-300 rounded-bl-2xl md:rounded-bl-3xl" />
-          <div className="h-[180px] md:h-[260px] lg:h-[320px] bg-gray-200" />
-          <div className="h-[180px] md:h-[260px] lg:h-[320px] bg-gray-300 rounded-br-2xl md:rounded-br-3xl" />
+          <div className="aspect-[3/2] bg-gray-300 rounded-bl-2xl md:rounded-bl-3xl" />
+          <div className="aspect-[3/2] bg-gray-200" />
+          <div className="aspect-[3/2] bg-gray-300 rounded-br-2xl md:rounded-br-3xl" />
         </div>
 
         {/* Center text overlay */}
