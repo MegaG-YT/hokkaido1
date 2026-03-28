@@ -1,15 +1,79 @@
+"use client"
+
+import { useRef } from "react"
+import { motion, useInView, useReducedMotion } from "framer-motion"
 import { SectionDivider } from "@/components/shared/section-divider"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 export function AssetValue() {
+  const ref = useRef<HTMLDivElement>(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px 0px 0px 0px" })
+  const prefersReducedMotion = useReducedMotion()
+
   return (
     <div className="mt-16">
       <SectionDivider title="資産価値としての可能性" />
       <SectionWrapper id="asset-value">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="h-64 rounded-lg bg-[var(--brand-gray)] flex items-center justify-center">
-            <p className="text-[var(--brand-text-muted)]">コンテンツ準備中</p>
-          </div>
+        <div className="mx-auto max-w-7xl px-4" ref={ref}>
+          {/* Heading block */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={
+              prefersReducedMotion
+                ? { duration: 0 }
+                : { duration: 0.6, ease: "easeOut" }
+            }
+            className="text-center mb-12 md:mb-16"
+          >
+            <p className="text-base md:text-lg text-[#596573] leading-relaxed">
+              &ldquo;泉&rdquo;は、将来的に人が集まる場所へ
+            </p>
+            <p className="text-base md:text-lg text-[#596573] leading-relaxed mb-6">
+              資産価値としての可能性
+            </p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl tracking-[0.3em] text-[#596573]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              ASSET VALUE
+            </h2>
+          </motion.div>
+
+          {/* Subtitle */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={
+              prefersReducedMotion
+                ? { duration: 0 }
+                : { duration: 0.6, delay: 0.15, ease: "easeOut" }
+            }
+            className="text-center mb-10 md:mb-14"
+          >
+            <p className="text-xs md:text-sm text-[var(--brand-text-muted)]">
+              2025年3月31日に改訂された
+            </p>
+            <p className="text-xs md:text-sm text-[var(--brand-text-muted)]">
+              「福島市立地適正化計画」における当計画地の位置付け
+            </p>
+          </motion.div>
+
+          {/* Body text */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={
+              prefersReducedMotion
+                ? { duration: 0 }
+                : { duration: 0.6, delay: 0.3, ease: "easeOut" }
+            }
+            className="max-w-3xl mx-auto"
+          >
+            <p className="text-sm md:text-base leading-loose text-[var(--brand-text)]">
+              全国の地方都市において、人口減少と高齢化社会は避けられない課題であり、都市計画の見直しが行われています。「コンパクト＋ネットワーク」という基本方針のもと、福島市では2025年3月に「立地適正化計画」の改訂が行われました。その中で、本計画地である福島市泉字堀之内前周辺は、「居住誘導区域」に該当しており、今後、行政の方針のもと&ldquo;将来的に人を集めるエリア&rdquo;として資産価値の維持もしくは向上の可能性が考えられる物件であるといえます。
+            </p>
+            <p className="text-xs md:text-sm text-[var(--brand-text-muted)] mt-4 text-center">
+              （引用：福島市WEBサイト「福島市立地適正化計画」）
+            </p>
+          </motion.div>
         </div>
       </SectionWrapper>
     </div>
