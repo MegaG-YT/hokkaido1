@@ -14,7 +14,7 @@ export function Hero() {
         </div>
 
         {/* Center text overlay */}
-        <div className="absolute inset-0 flex items-center justify-center" style={{ transform: 'translateX(-70px)' }}>
+        <div className="absolute inset-0 flex items-center justify-center" style={{ transform: 'translateX(-170px)' }}>
           {/* White background container — 10px larger than inner content */}
           <div className="bg-white p-[17px]">
             {/* Gold banner */}
