@@ -88,11 +88,11 @@ export function Header() {
             <div key={item.id} className="flex-1 flex items-center">
               <a
                 href={`#${item.id}`}
-                className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 overflow-hidden group"
+                className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 group"
               >
                 <span
                   className="absolute inset-0 bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ transform: "skewX(-12deg) scaleX(1.3)" }}
+                  style={{ clipPath: "polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)" }}
                 />
                 <span className="relative z-10">{item.label}</span>
               </a>
