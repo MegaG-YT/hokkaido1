@@ -47,7 +47,7 @@ export function Hero() {
           <span className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-wider">新発売</span>
           <span className="border-l border-white/40 h-8 md:h-12" />
           <span className="flex items-stretch gap-2">
-            <span className="flex flex-col justify-center gap-2 text-xs md:text-sm lg:text-base text-center leading-none">
+            <span className="flex flex-col justify-center gap-3 text-xs md:text-sm lg:text-base text-center leading-none">
               <span>建　築</span>
               <span>条件付</span>
             </span>
