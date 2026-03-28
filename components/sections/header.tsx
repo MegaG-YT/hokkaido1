@@ -92,7 +92,6 @@ export function Header() {
               >
                 <span
                   className="absolute inset-0 bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ clipPath: "polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)" }}
                 />
                 <span className="relative z-10">{item.label}</span>
               </a>
