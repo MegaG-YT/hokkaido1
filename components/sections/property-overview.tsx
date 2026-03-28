@@ -21,7 +21,7 @@ export function PropertyOverview() {
               物件概要
             </p>
             <h2
-              className="text-5xl md:text-7xl lg:text-8xl font-serif italic"
+              className="text-5xl md:text-7xl lg:text-8xl font-serif"
               style={{ color: "var(--brand-accent)" }}
             >
               Outline
