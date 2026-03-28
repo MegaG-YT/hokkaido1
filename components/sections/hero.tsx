@@ -25,7 +25,7 @@ export function Hero() {
             </div>
             {/* Title strip — same width, inside the white box */}
             <div className="py-0 md:py-0.5 text-center whitespace-nowrap">
-              <h1 className="font-bold tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <h1 className="font-bold" style={{ letterSpacing: '0.15em' }} style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 <span className="text-[#9e8c5a]" style={{ fontSize: 'clamp(1.25rem, 3.8vw, 3rem)' }}>
                   スマートハイムシティ
                 </span>
