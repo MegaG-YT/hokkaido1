@@ -17,8 +17,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "北海道東北プロジェクト",
-  description: "北海道東北プロジェクト",
+  title: "スマートハイムシティ泉 | セキスイハイム東北",
+  description: "セキスイハイム東北が贈る、スマートハイムシティ泉の物件情報ページ",
 };
 
 export default function RootLayout({

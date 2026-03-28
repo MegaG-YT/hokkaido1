@@ -1,7 +1,25 @@
+import { Header } from "@/components/sections/header"
+import { Hero } from "@/components/sections/hero"
+import { AssetValue } from "@/components/sections/asset-value"
+import { SurroundingEnvironment } from "@/components/sections/surrounding-environment"
+import { AccessSection } from "@/components/sections/access-section"
+import { LotInformation } from "@/components/sections/lot-information"
+import { PropertyOverview } from "@/components/sections/property-overview"
+import { Footer } from "@/components/sections/footer"
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <h1 className="text-4xl font-bold">北海道東北プロジェクト</h1>
-    </main>
-  );
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <AssetValue />
+        <SurroundingEnvironment />
+        <AccessSection />
+        <LotInformation />
+        <PropertyOverview />
+      </main>
+      <Footer />
+    </>
+  )
 }

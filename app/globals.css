@@ -76,6 +76,8 @@
   --brand-gray: #f5f7fa;
   --brand-text: #1a1a1a;
   --brand-text-muted: #6b7280;
+  --brand-nav: #9e8c5a;
+  --brand-nav-foreground: #ffffff;
 }
 
 @layer base {
