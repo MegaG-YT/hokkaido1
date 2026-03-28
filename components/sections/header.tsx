@@ -1,6 +1,6 @@
 "use client"
 
-import { Fragment, useState } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { Menu, ExternalLink } from "lucide-react"
 import {
@@ -85,16 +85,15 @@ export function Header() {
       <nav className="hidden md:block bg-[var(--brand-nav)]">
         <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
           {NAV_ITEMS.map((item, i) => (
-            <Fragment key={item.id}>
-              <a
-                href={`#${item.id}`}
-                className={`flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors skew-x-[-6deg] ${
-                  i < NAV_ITEMS.length - 1 ? "border-r border-white/30" : ""
-                }`}
-              >
-                <span className="inline-block skew-x-[6deg]">{item.label}</span>
-              </a>
-            </Fragment>
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className={`flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors ${
+                i < NAV_ITEMS.length - 1 ? "border-r border-white/30" : ""
+              }`}
+            >
+              {item.label}
+            </a>
           ))}
         </div>
       </nav>
