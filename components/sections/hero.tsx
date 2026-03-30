@@ -28,7 +28,7 @@ export function Hero() {
   return (
     <section className="relative md:px-8 md:pt-6">
       <div className="relative">
-        <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 md:gap-5">
           {CELLS.map((cell, i) => (
             <div key={i} className={`aspect-[3/2] relative overflow-hidden ${cell.className}`}>
               <div className={`absolute inset-0 ${cell.a} transition-opacity duration-1000 ${cycle === 0 ? "opacity-100" : "opacity-0"}`} />
