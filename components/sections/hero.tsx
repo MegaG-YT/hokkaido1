@@ -7,10 +7,10 @@ import { useState, useEffect } from "react"
 const CELLS = [
   { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tl-3xl" },
   { a: "bg-gray-200", b: "bg-slate-300", className: "" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tr-3xl" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-bl-3xl" },
-  { a: "bg-gray-200", b: "bg-slate-300", className: "" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-br-3xl" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "hidden md:block md:rounded-tr-3xl" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "hidden md:block md:rounded-bl-3xl" },
+  { a: "bg-gray-200", b: "bg-slate-300", className: "hidden md:block" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "hidden md:block md:rounded-br-3xl" },
 ]
 
 const INTERVAL_MS = 3500
