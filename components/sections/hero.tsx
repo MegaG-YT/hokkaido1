@@ -2,25 +2,37 @@
 
 import { useState, useEffect } from "react"
 
-// Each cell has 2 images (a, b) that alternate on a timer.
-// Replace the placeholder bg-* classes with actual Next.js Image components when assets are ready.
-const CELLS = [
-  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tl-3xl" },
-  { a: "bg-gray-200", b: "bg-slate-300", className: "" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "hidden md:block md:rounded-tr-3xl" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "hidden md:block md:rounded-bl-3xl" },
-  { a: "bg-gray-200", b: "bg-slate-300", className: "hidden md:block" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "hidden md:block md:rounded-br-3xl" },
+// 6 images total. Mobile shows 2 slots cycling through all 6 in pairs (3 states).
+// Desktop shows all 6 cells simultaneously.
+// Replace bg-* placeholders with next/image when assets are ready.
+const IMAGES = [
+  "bg-gray-300",
+  "bg-gray-200",
+  "bg-stone-400",
+  "bg-slate-300",
+  "bg-gray-400",
+  "bg-gray-100",
+]
+
+// Desktop: each cell has a pair of images that crossfade
+const DESKTOP_PAIRS = [
+  { images: [0, 3], className: "md:rounded-tl-3xl" },
+  { images: [1, 4], className: "" },
+  { images: [2, 5], className: "md:rounded-tr-3xl" },
+  { images: [3, 0], className: "md:rounded-bl-3xl" },
+  { images: [4, 1], className: "" },
+  { images: [5, 2], className: "md:rounded-br-3xl" },
 ]
 
 const INTERVAL_MS = 3500
 
 export function Hero() {
+  // 3 states on mobile (pair 0→1→2), 2 states on desktop (A/B per cell)
   const [cycle, setCycle] = useState(0)
 
   useEffect(() => {
     const id = setInterval(() => {
-      setCycle(c => (c + 1) % 2)
+      setCycle(c => (c + 1) % 3)
     }, INTERVAL_MS)
     return () => clearInterval(id)
   }, [])
@@ -28,11 +40,26 @@ export function Hero() {
   return (
     <section className="relative md:px-8 md:pt-6">
       <div className="relative">
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 md:gap-5">
-          {CELLS.map((cell, i) => (
+        {/* Mobile: 2 full-width stacked slots cycling through all 6 images */}
+        <div className="grid grid-cols-1 md:hidden">
+          {[0, 1].map(slot => (
+            <div key={slot} className="aspect-[3/2] relative overflow-hidden">
+              {[0, 1, 2].map(state => (
+                <div
+                  key={state}
+                  className={`absolute inset-0 ${IMAGES[state * 2 + slot]} transition-opacity duration-1000 ${cycle === state ? "opacity-100" : "opacity-0"}`}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: full 3×2 grid, each cell crossfades its own pair */}
+        <div className="hidden md:grid md:grid-cols-3 md:grid-rows-2 md:gap-5">
+          {DESKTOP_PAIRS.map((cell, i) => (
             <div key={i} className={`aspect-[3/2] relative overflow-hidden ${cell.className}`}>
-              <div className={`absolute inset-0 ${cell.a} transition-opacity duration-1000 ${cycle === 0 ? "opacity-100" : "opacity-0"}`} />
-              <div className={`absolute inset-0 ${cell.b} transition-opacity duration-1000 ${cycle === 1 ? "opacity-100" : "opacity-0"}`} />
+              <div className={`absolute inset-0 ${IMAGES[cell.images[0]]} transition-opacity duration-1000 ${cycle !== 1 ? "opacity-100" : "opacity-0"}`} />
+              <div className={`absolute inset-0 ${IMAGES[cell.images[1]]} transition-opacity duration-1000 ${cycle === 1 ? "opacity-100" : "opacity-0"}`} />
             </div>
           ))}
         </div>
