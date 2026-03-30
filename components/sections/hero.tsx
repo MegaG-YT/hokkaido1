@@ -8,10 +8,10 @@ import { useState, useEffect } from "react"
 const IMAGES = [
   "bg-gray-300",
   "bg-gray-200",
-  "bg-stone-400",
-  "bg-slate-300",
-  "bg-gray-400",
-  "bg-gray-100",
+  "bg-gray-300",
+  "bg-gray-300",
+  "bg-gray-200",
+  "bg-gray-300",
 ]
 
 // Desktop: static cells, no cycling
