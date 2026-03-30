@@ -41,25 +41,50 @@ export function Hero() {
   return (
     <section className="relative md:px-8 md:pt-6">
       <div className="relative">
-        {/* Mobile: 2 full-width stacked slots cycling through all 6 images */}
-        <div className="grid grid-cols-1 md:hidden">
-          {[0, 1].map(slot => {
-            const fromRight = slot === 0
-            return (
-              <div key={slot} className="aspect-[3/2] relative overflow-hidden">
-                <AnimatePresence initial={false}>
-                  <motion.div
-                    key={cycle}
-                    className={`absolute inset-0 ${IMAGES[cycle * 2 + slot]}`}
-                    initial={prefersReducedMotion ? { opacity: 0 } : { x: fromRight ? "100%" : "-100%" }}
-                    animate={prefersReducedMotion ? { opacity: 1 } : { x: 0 }}
-                    exit={prefersReducedMotion ? { opacity: 0 } : { x: fromRight ? "-100%" : "100%" }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                  />
-                </AnimatePresence>
-              </div>
-            )
-          })}
+        {/* Mobile: slot 0 → label → slot 1 */}
+        <div className="md:hidden">
+          {/* Slot 0 — slides in from right */}
+          <div className="aspect-[3/2] relative overflow-hidden">
+            <AnimatePresence initial={false}>
+              <motion.div
+                key={cycle}
+                className={`absolute inset-0 ${IMAGES[cycle * 2]}`}
+                initial={prefersReducedMotion ? { opacity: 0 } : { x: "100%" }}
+                animate={prefersReducedMotion ? { opacity: 1 } : { x: 0 }}
+                exit={prefersReducedMotion ? { opacity: 0 } : { x: "-100%" }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+              />
+            </AnimatePresence>
+          </div>
+
+          {/* Hero label — full width, between the two images */}
+          <div className="w-full bg-white py-3">
+            <div className="bg-[#9e8c5a] py-2 px-4 text-center">
+              <p className="text-white font-bold tracking-widest text-sm" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                福島市の将来を牽引する街「泉」という選択<sup className="text-[0.5em] align-super">※</sup>
+              </p>
+            </div>
+            <div className="text-center py-1">
+              <h1 className="font-bold" style={{ letterSpacing: '0.15em', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                <span className="text-[#9e8c5a] text-lg">スマートハイムシティ</span>
+                <span className="text-[#333333] text-2xl">泉</span>
+              </h1>
+            </div>
+          </div>
+
+          {/* Slot 1 — slides in from left */}
+          <div className="aspect-[3/2] relative overflow-hidden">
+            <AnimatePresence initial={false}>
+              <motion.div
+                key={cycle}
+                className={`absolute inset-0 ${IMAGES[cycle * 2 + 1]}`}
+                initial={prefersReducedMotion ? { opacity: 0 } : { x: "-100%" }}
+                animate={prefersReducedMotion ? { opacity: 1 } : { x: 0 }}
+                exit={prefersReducedMotion ? { opacity: 0 } : { x: "100%" }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+              />
+            </AnimatePresence>
+          </div>
         </div>
 
         {/* Desktop: static 3×2 grid, no cycling */}
