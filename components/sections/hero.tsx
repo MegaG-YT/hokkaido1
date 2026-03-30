@@ -14,14 +14,14 @@ const IMAGES = [
   "bg-gray-100",
 ]
 
-// Desktop: each cell has its own fixed pair of images
+// Desktop: static cells, no cycling
 const DESKTOP_CELLS = [
-  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tl-3xl" },
-  { a: "bg-gray-200", b: "bg-slate-300", className: "" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tr-3xl" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-bl-3xl" },
-  { a: "bg-gray-200", b: "bg-slate-300", className: "" },
-  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-br-3xl" },
+  { bg: "bg-gray-300", className: "md:rounded-tl-3xl" },
+  { bg: "bg-gray-200", className: "" },
+  { bg: "bg-gray-300", className: "md:rounded-tr-3xl" },
+  { bg: "bg-gray-300", className: "md:rounded-bl-3xl" },
+  { bg: "bg-gray-200", className: "" },
+  { bg: "bg-gray-300", className: "md:rounded-br-3xl" },
 ]
 
 const INTERVAL_MS = 3500
@@ -54,13 +54,10 @@ export function Hero() {
           ))}
         </div>
 
-        {/* Desktop: full 3×2 grid, each cell crossfades its own fixed pair */}
+        {/* Desktop: static 3×2 grid, no cycling */}
         <div className="hidden md:grid md:grid-cols-3 md:grid-rows-2 md:gap-5">
           {DESKTOP_CELLS.map((cell, i) => (
-            <div key={i} className={`aspect-[3/2] relative overflow-hidden ${cell.className}`}>
-              <div className={`absolute inset-0 ${cell.a} transition-opacity duration-1000 ${cycle % 2 === 0 ? "opacity-100" : "opacity-0"}`} />
-              <div className={`absolute inset-0 ${cell.b} transition-opacity duration-1000 ${cycle % 2 === 1 ? "opacity-100" : "opacity-0"}`} />
-            </div>
+            <div key={i} className={`aspect-[3/2] ${cell.bg} ${cell.className}`} />
           ))}
         </div>
 
