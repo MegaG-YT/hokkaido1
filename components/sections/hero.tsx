@@ -72,7 +72,7 @@ export function Hero() {
           </div>
 
           {/* Hero label — absolute overlay centered over both images */}
-          <div className="absolute inset-0 flex items-center justify-start pl-6 pointer-events-none">
+          <div className="absolute inset-0 flex items-center justify-start pl-4 pr-16 pointer-events-none">
             <div className="bg-white py-3 w-full">
               <div className="bg-[#9e8c5a] py-2 px-4 mx-4 text-center">
                 <p className="text-white font-bold tracking-widest text-xs whitespace-nowrap" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
