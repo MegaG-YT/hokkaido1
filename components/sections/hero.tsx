@@ -59,7 +59,7 @@ export function Hero() {
 
           {/* Hero label — full width, between the two images */}
           <div className="w-full bg-white py-3">
-            <div className="bg-[#9e8c5a] py-2 px-4 text-center">
+            <div className="bg-[#9e8c5a] py-2 px-4 text-center" style={{ clipPath: "polygon(16px 0%, 100% 0%, calc(100% - 16px) 100%, 0% 100%)" }}>
               <p className="text-white font-bold tracking-widest text-sm" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 福島市の将来を牽引する街「泉」という選択<sup className="text-[0.5em] align-super">※</sup>
               </p>
