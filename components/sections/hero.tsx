@@ -1,20 +1,40 @@
+"use client"
+
+import { useState, useEffect } from "react"
+
+// Each cell has 2 images (a, b) that alternate on a timer.
+// Replace the placeholder bg-* classes with actual Next.js Image components when assets are ready.
+const CELLS = [
+  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tl-3xl" },
+  { a: "bg-gray-200", b: "bg-slate-300", className: "" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tr-3xl" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-bl-3xl" },
+  { a: "bg-gray-200", b: "bg-slate-300", className: "" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-br-3xl" },
+]
+
+const INTERVAL_MS = 3500
+
 export function Hero() {
+  const [cycle, setCycle] = useState(0)
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCycle(c => (c + 1) % 2)
+    }, INTERVAL_MS)
+    return () => clearInterval(id)
+  }, [])
+
   return (
     <section className="relative md:px-8 md:pt-6">
       <div className="relative">
         <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 md:gap-5">
-          {/* Cell 1 — top-left in both layouts */}
-          <div className="aspect-[3/2] bg-gray-300 md:rounded-tl-3xl" />
-          {/* Cell 2 — top-right on mobile (2-col), middle on desktop */}
-          <div className="aspect-[3/2] bg-gray-200" />
-          {/* Cell 3 — middle-left on mobile, top-right on desktop */}
-          <div className="aspect-[3/2] bg-gray-300 md:rounded-tr-3xl" />
-          {/* Cell 4 — middle-right on mobile, bottom-left on desktop */}
-          <div className="aspect-[3/2] bg-gray-300 md:rounded-bl-3xl" />
-          {/* Cell 5 — bottom-left on mobile, middle on desktop */}
-          <div className="aspect-[3/2] bg-gray-200 md:rounded-none" />
-          {/* Cell 6 — bottom-right in both layouts */}
-          <div className="aspect-[3/2] bg-gray-300 md:rounded-br-3xl" />
+          {CELLS.map((cell, i) => (
+            <div key={i} className={`aspect-[3/2] relative overflow-hidden ${cell.className}`}>
+              <div className={`absolute inset-0 ${cell.a} transition-opacity duration-1000 ${cycle === 0 ? "opacity-100" : "opacity-0"}`} />
+              <div className={`absolute inset-0 ${cell.b} transition-opacity duration-1000 ${cycle === 1 ? "opacity-100" : "opacity-0"}`} />
+            </div>
+          ))}
         </div>
 
         {/* Center text overlay */}
