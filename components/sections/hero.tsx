@@ -14,14 +14,14 @@ const IMAGES = [
   "bg-gray-100",
 ]
 
-// Desktop: each cell has a pair of images that crossfade
-const DESKTOP_PAIRS = [
-  { images: [0, 3], className: "md:rounded-tl-3xl" },
-  { images: [1, 4], className: "" },
-  { images: [2, 5], className: "md:rounded-tr-3xl" },
-  { images: [3, 0], className: "md:rounded-bl-3xl" },
-  { images: [4, 1], className: "" },
-  { images: [5, 2], className: "md:rounded-br-3xl" },
+// Desktop: each cell has its own fixed pair of images
+const DESKTOP_CELLS = [
+  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tl-3xl" },
+  { a: "bg-gray-200", b: "bg-slate-300", className: "" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-tr-3xl" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-bl-3xl" },
+  { a: "bg-gray-200", b: "bg-slate-300", className: "" },
+  { a: "bg-gray-300", b: "bg-stone-400", className: "md:rounded-br-3xl" },
 ]
 
 const INTERVAL_MS = 3500
@@ -54,12 +54,12 @@ export function Hero() {
           ))}
         </div>
 
-        {/* Desktop: full 3×2 grid, each cell crossfades its own pair */}
+        {/* Desktop: full 3×2 grid, each cell crossfades its own fixed pair */}
         <div className="hidden md:grid md:grid-cols-3 md:grid-rows-2 md:gap-5">
-          {DESKTOP_PAIRS.map((cell, i) => (
+          {DESKTOP_CELLS.map((cell, i) => (
             <div key={i} className={`aspect-[3/2] relative overflow-hidden ${cell.className}`}>
-              <div className={`absolute inset-0 ${IMAGES[cell.images[0]]} transition-opacity duration-1000 ${cycle !== 1 ? "opacity-100" : "opacity-0"}`} />
-              <div className={`absolute inset-0 ${IMAGES[cell.images[1]]} transition-opacity duration-1000 ${cycle === 1 ? "opacity-100" : "opacity-0"}`} />
+              <div className={`absolute inset-0 ${cell.a} transition-opacity duration-1000 ${cycle % 2 === 0 ? "opacity-100" : "opacity-0"}`} />
+              <div className={`absolute inset-0 ${cell.b} transition-opacity duration-1000 ${cycle % 2 === 1 ? "opacity-100" : "opacity-0"}`} />
             </div>
           ))}
         </div>
