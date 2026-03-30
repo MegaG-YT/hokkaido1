@@ -58,7 +58,7 @@ export function Hero() {
           </div>
 
           {/* Hero label — full width, between the two images */}
-          <div className="w-full bg-white py-3">
+          <div className="bg-white py-3 mx-4">
             <div className="bg-[#9e8c5a] py-2 px-4 mx-6 text-center">
               <p className="text-white font-bold tracking-widest text-xs whitespace-nowrap" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 福島市の将来を牽引する街「泉」という選択<sup className="text-[0.5em] align-super">※</sup>
