@@ -97,7 +97,7 @@ export function LotInformation() {
             {/* Plot Map Layers */}
             <motion.div {...animate(0.3)}>
               <div className="relative mx-auto w-full max-w-2xl overflow-hidden">
-                {/* Map background (bottom layer) */}
+                {/* Map background (bottom layer - sets container size) */}
                 <Image
                   src="/images/lot-map-bg.webp"
                   alt=""
@@ -107,24 +107,26 @@ export function LotInformation() {
                   sizes="(max-width: 768px) 100vw, 672px"
                   priority={false}
                 />
-                {/* Roads layer (middle) */}
+                {/* Roads layer (middle - scaled up to clip beyond background) */}
                 <Image
                   src="/images/lot-plan-roads.webp"
                   alt=""
                   width={5187}
                   height={4519}
-                  className="absolute inset-0 h-full w-full object-contain"
-                  sizes="(max-width: 768px) 100vw, 672px"
+                  className="absolute h-[115%] w-[115%] object-contain"
+                  style={{ top: "-5%", left: "-7.5%" }}
+                  sizes="(max-width: 768px) 100vw, 800px"
                   priority={false}
                 />
-                {/* Lot map layer (top) */}
+                {/* Lot map layer (top - same scale as roads) */}
                 <Image
                   src="/images/lot-plan-map.webp"
                   alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
                   width={2882}
                   height={4005}
-                  className="absolute inset-0 h-full w-full object-contain"
-                  sizes="(max-width: 768px) 100vw, 672px"
+                  className="absolute h-[115%] w-[115%] object-contain"
+                  style={{ top: "-5%", left: "-7.5%" }}
+                  sizes="(max-width: 768px) 100vw, 800px"
                   priority={false}
                 />
               </div>
