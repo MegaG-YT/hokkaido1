@@ -45,8 +45,8 @@ export function AssetValue() {
                 ? { duration: 0 }
                 : { duration: 0.6, delay: 0.15, ease: "easeOut" }
             }
-            className="max-w-3xl mx-auto bg-white/50 rounded-2xl p-8 md:p-12"
-            style={{ boxShadow: '0 8px 20px rgba(0,0,0,0.11), 0 6px 14px rgba(0,0,0,0.07)' }}
+            className="bg-white/50 rounded-2xl p-10 md:p-16"
+            style={{ boxShadow: '0 16px 48px rgba(0,0,0,0.14), 0 8px 24px rgba(0,0,0,0.09)' }}
           >
             {/* Subtitle */}
             <div className="text-center mb-8 md:mb-10">
