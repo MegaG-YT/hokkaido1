@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
+import Image from "next/image"
 import { SectionDivider } from "@/components/shared/section-divider"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
@@ -66,6 +67,25 @@ export function AssetValue() {
             <p className="text-xs md:text-sm text-[var(--brand-text-muted)] mt-4 text-center">
               （引用：福島市WEBサイト「福島市立地適正化計画」）
             </p>
+          </motion.div>
+
+          {/* Aerial map image */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={
+              prefersReducedMotion
+                ? { duration: 0 }
+                : { duration: 0.6, delay: 0.3, ease: "easeOut" }
+            }
+            className="mt-10 md:mt-14 relative w-full aspect-[16/9] overflow-hidden rounded-2xl"
+          >
+            <Image
+              src="/images/asset-value-map.png"
+              alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
+              fill
+              className="object-cover"
+            />
           </motion.div>
         </div>
       </SectionWrapper>
