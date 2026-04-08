@@ -87,7 +87,7 @@ export function SurroundingEnvironment() {
                 {SIDEBAR_FACILITIES.map((facility) => (
                   <div key={facility.name} className="w-1/3 md:w-auto">
                     <div className="relative h-20 md:h-auto md:aspect-[4/3] overflow-hidden">
-                      <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
+                      <Image src={facility.src} alt={facility.name} fill className="object-fill md:object-cover" style={{ objectPosition: facility.objectPosition }} />
                     </div>
                     <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                     <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
