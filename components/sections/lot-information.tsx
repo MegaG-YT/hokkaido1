@@ -1,7 +1,13 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useInView, useReducedMotion } from "framer-motion"
+import {
+  motion,
+  useInView,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "framer-motion"
 import Image from "next/image"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
@@ -9,8 +15,17 @@ const SERIF_FONT = '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif'
 
 export function LotInformation() {
   const ref = useRef<HTMLDivElement>(null)
+  const mapRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px 0px" })
   const prefersReducedMotion = useReducedMotion()
+
+  // Parallax scroll - roads move slower than lot map
+  const { scrollYProgress } = useScroll({
+    target: mapRef,
+    offset: ["start end", "end start"],
+  })
+  const roadsY = useTransform(scrollYProgress, [0, 1], [15, -15])
+  const lotMapY = useTransform(scrollYProgress, [0, 1], [25, -25])
 
   const animate = (delay: number = 0) => {
     if (prefersReducedMotion) return {}
@@ -95,15 +110,31 @@ export function LotInformation() {
             </div>
 
             {/* Plot Map Layers with perspective */}
-            <div style={{ perspective: "1200px" }}>
+            <div ref={mapRef} style={{ perspective: "1200px" }}>
               <motion.div
                 {...(prefersReducedMotion
                   ? {}
                   : {
-                      initial: { rotateX: 8, scale: 0.95, opacity: 0 },
+                      initial: {
+                        rotateX: 8,
+                        scale: 0.95,
+                        opacity: 0,
+                        boxShadow: "0 0 0 rgba(0,0,0,0)",
+                      },
                       animate: isInView
-                        ? { rotateX: 0, scale: 1, opacity: 1 }
-                        : { rotateX: 8, scale: 0.95, opacity: 0 },
+                        ? {
+                            rotateX: 0,
+                            scale: 1,
+                            opacity: 1,
+                            boxShadow:
+                              "0 25px 60px -12px rgba(0,0,0,0.15), 0 12px 25px -8px rgba(0,0,0,0.1)",
+                          }
+                        : {
+                            rotateX: 8,
+                            scale: 0.95,
+                            opacity: 0,
+                            boxShadow: "0 0 0 rgba(0,0,0,0)",
+                          },
                       transition: {
                         duration: 1.2,
                         delay: 0.3,
@@ -115,8 +146,9 @@ export function LotInformation() {
                         ],
                       },
                     })}
+                className="rounded-lg"
               >
-                <div className="relative mx-auto w-full max-w-2xl overflow-hidden">
+                <div className="relative mx-auto w-full max-w-2xl overflow-hidden rounded-lg">
                   {/* 区画図 badge */}
                   <motion.div
                     className="absolute left-4 top-4 z-30 rounded-md bg-[#555555] px-4 py-1.5"
@@ -155,16 +187,17 @@ export function LotInformation() {
                     priority={false}
                   />
 
-                  {/* Roads layer (middle - appears first) */}
+                  {/* Roads layer (middle - appears first, parallax) */}
                   <motion.div
                     className="absolute inset-0"
+                    style={prefersReducedMotion ? {} : { y: roadsY }}
                     {...(prefersReducedMotion
                       ? {}
                       : {
-                          initial: { opacity: 0, y: 20 },
+                          initial: { opacity: 0 },
                           animate: isInView
-                            ? { opacity: 1, y: 0 }
-                            : { opacity: 0, y: 20 },
+                            ? { opacity: 1 }
+                            : { opacity: 0 },
                           transition: {
                             duration: 1.0,
                             delay: 0.5,
@@ -194,16 +227,17 @@ export function LotInformation() {
                     />
                   </motion.div>
 
-                  {/* Lot map layer (top - fades in after roads) */}
+                  {/* Lot map layer (top - fades in after roads, parallax) */}
                   <motion.div
                     className="absolute inset-0"
+                    style={prefersReducedMotion ? {} : { y: lotMapY }}
                     {...(prefersReducedMotion
                       ? {}
                       : {
-                          initial: { opacity: 0, y: 30, scale: 0.98 },
+                          initial: { opacity: 0, scale: 0.98 },
                           animate: isInView
-                            ? { opacity: 1, y: 0, scale: 1 }
-                            : { opacity: 0, y: 30, scale: 0.98 },
+                            ? { opacity: 1, scale: 1 }
+                            : { opacity: 0, scale: 0.98 },
                           transition: {
                             duration: 1.2,
                             delay: 1.0,
