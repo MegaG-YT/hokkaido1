@@ -25,10 +25,10 @@ export function AssetValue() {
             }
             className="text-center mb-12 md:mb-16"
           >
-            <p className="text-6xl md:text-lg text-[#333333] font-bold leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="md:text-lg text-[#333333] font-bold leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '2.5rem' }}>
               &ldquo;泉&rdquo;は、将来的に人が集まる場所へ
             </p>
-            <p className="text-xl md:text-lg text-[#333333] font-bold leading-relaxed mb-6" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="md:text-lg text-[#333333] font-bold leading-relaxed mb-6" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '2.5rem' }}>
               資産価値としての可能性
             </p>
             <h2 className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em] text-[#A8B2BC]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>

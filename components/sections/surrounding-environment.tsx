@@ -42,10 +42,10 @@ export function SurroundingEnvironment() {
               transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut" }}
               className="text-center mb-8 md:mb-12"
             >
-              <p className="text-xl md:text-2xl text-[var(--brand-text-muted)] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-xl md:text-2xl text-[#1a1a1a] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 駅も、買い物も、医療も。
               </p>
-              <p className="text-xl md:text-2xl text-[var(--brand-text-muted)] leading-relaxed mb-6 font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-xl md:text-2xl text-[#1a1a1a] leading-relaxed mb-6 font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 生活利便施設が500m圏内に。
               </p>
               <h2
