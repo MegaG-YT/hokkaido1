@@ -16,9 +16,9 @@ export default function Home() {
       <main>
         <Hero />
         <AssetValue />
+        <SurroundingEnvironment />
         <Landscape />
         <SmartResilience />
-        <SurroundingEnvironment />
         <AccessSection />
         <LotInformation />
         <PropertyOverview />
