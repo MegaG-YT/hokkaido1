@@ -48,21 +48,26 @@ export function SmartResilience() {
   const isInView = useInView(ref, { once: true, margin: "-100px 0px 0px 0px" })
   const prefersReducedMotion = useReducedMotion()
 
+  const topCards = CARDS.slice(0, 3)
+  const bottomCards = CARDS.slice(3)
+
   return (
     <>
       <SectionWrapper id="smart-resilience">
-        {/* Heading inside max-w container */}
-        <div className="mx-auto max-w-7xl px-4" ref={ref}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={
-              prefersReducedMotion
-                ? { duration: 0 }
-                : { duration: 0.6, ease: "easeOut" }
-            }
-            className="text-center mb-12 md:mb-16"
-          >
+        {/* Light blue box with border — wider than content */}
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={
+            prefersReducedMotion
+              ? { duration: 0 }
+              : { duration: 0.6, ease: "easeOut" }
+          }
+          className="bg-[#E8F4F8] border border-[#B8DBE8] rounded-2xl mx-4 md:mx-8 lg:mx-16 p-6 md:p-10 lg:p-14"
+        >
+          {/* Heading inside blue box */}
+          <div className="text-center mb-10 md:mb-14">
             <h2
               className="text-3xl md:text-5xl lg:text-6xl tracking-[0.05em] text-[var(--brand-text)] mb-4"
               style={{
@@ -75,23 +80,12 @@ export function SmartResilience() {
             <p className="text-sm md:text-base text-[var(--brand-text-muted)]">
               地球環境の負荷をおさえ災害に備える「まち」づくり
             </p>
-          </motion.div>
-        </div>
+          </div>
 
-        {/* Light blue box — wider than content */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={
-            prefersReducedMotion
-              ? { duration: 0 }
-              : { duration: 0.6, delay: 0.15, ease: "easeOut" }
-          }
-          className="bg-[#E8F4F8] rounded-2xl mx-4 md:mx-8 lg:mx-16 p-6 md:p-10 lg:p-12"
-        >
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-6xl">
+            {/* Top row — 3 columns */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {CARDS.map((card, index) => (
+              {topCards.map((card, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -108,12 +102,9 @@ export function SmartResilience() {
                         }
                   }
                 >
-                  {/* Card title */}
                   <h3 className="text-sm md:text-base font-bold text-[var(--brand-text)] mb-4 min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center text-center whitespace-pre-line">
                     {card.title}
                   </h3>
-
-                  {/* Image */}
                   <div className="mb-4">
                     <Image
                       src={card.image}
@@ -123,8 +114,44 @@ export function SmartResilience() {
                       className="w-full h-auto"
                     />
                   </div>
+                  <p className="text-xs md:text-sm leading-relaxed text-[var(--brand-text-muted)]">
+                    {card.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
 
-                  {/* Description */}
+            {/* Bottom row — 2 columns, wider */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-10 md:mt-14">
+              {bottomCards.map((card, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={
+                    prefersReducedMotion
+                      ? { duration: 0 }
+                      : {
+                          duration: 0.5,
+                          delay: 0.5 + index * 0.1,
+                          ease: "easeOut",
+                        }
+                  }
+                >
+                  <h3 className="text-sm md:text-base font-bold text-[var(--brand-text)] mb-4 flex items-center justify-center text-center">
+                    {card.title}
+                  </h3>
+                  <div className="mb-4">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      width={800}
+                      height={450}
+                      className="w-full h-auto"
+                    />
+                  </div>
                   <p className="text-xs md:text-sm leading-relaxed text-[var(--brand-text-muted)]">
                     {card.description}
                   </p>
