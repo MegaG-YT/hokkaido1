@@ -80,7 +80,7 @@ export function Landscape() {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left column - Building layout */}
             <motion.div {...animate(0.4)}>
-              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 自然の心地よさを
               </h3>
               <div className="relative w-full aspect-[4/3] mb-6">
@@ -101,7 +101,7 @@ export function Landscape() {
 
             {/* Right column - Privacy */}
             <motion.div {...animate(0.5)}>
-              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 プライバシーに配慮して部屋や窓を設計
               </h3>
               <div className="relative w-full aspect-[4/3] mb-6">
@@ -122,7 +122,7 @@ export function Landscape() {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left - Greenery */}
             <motion.div {...animate(0.6)}>
-              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 豊かな緑で彩られるまち
               </h3>
               <div className="mb-6">
@@ -141,7 +141,7 @@ export function Landscape() {
 
             {/* Right - Lighting */}
             <motion.div {...animate(0.7)}>
-              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 外灯でまちを美しくライトアップ
               </h3>
               <div className="mb-6">
