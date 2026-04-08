@@ -113,8 +113,8 @@ export function LotInformation() {
                   alt=""
                   width={5187}
                   height={4519}
-                  className="absolute h-[115%] w-[115%] object-contain"
-                  style={{ top: "-5%", left: "-7.5%" }}
+                  className="absolute h-[130%] w-[130%] object-contain"
+                  style={{ top: "-12%", left: "-15%" }}
                   sizes="(max-width: 768px) 100vw, 800px"
                   priority={false}
                 />
@@ -124,8 +124,8 @@ export function LotInformation() {
                   alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
                   width={2882}
                   height={4005}
-                  className="absolute h-[115%] w-[115%] object-contain"
-                  style={{ top: "-5%", left: "-7.5%" }}
+                  className="absolute h-[130%] w-[130%] object-contain"
+                  style={{ top: "-12%", left: "-15%" }}
                   sizes="(max-width: 768px) 100vw, 800px"
                   priority={false}
                 />
