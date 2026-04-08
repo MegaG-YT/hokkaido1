@@ -41,7 +41,7 @@ export function Header() {
           className="hidden md:inline-flex items-center gap-2 border border-[var(--brand-primary)] text-[var(--brand-primary)] px-4 py-2 rounded text-sm hover:bg-[var(--brand-primary)] hover:text-white transition-colors"
           style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
         >
-          セキスイハイム東北サイトはこちら
+          <strong>セキスイハイム東北サイトはこちら</strong>
           <ExternalLink className="h-4 w-4" />
         </a>
 
@@ -75,7 +75,7 @@ export function Header() {
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
                 onClick={() => setOpen(false)}
               >
-                セキスイハイム東北サイトはこちら
+                <strong>セキスイハイム東北サイトはこちら</strong>
                 <ExternalLink className="h-4 w-4" />
               </a>
             </nav>
