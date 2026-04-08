@@ -41,13 +41,6 @@ const CARDS = [
     description:
       "独自のユニットテクノロジーで作られた強靭な建物が家族を災害から守ります。分譲地に建つすべての建物が耐震性に優れているからこそ、災害に強いまちに。",
   },
-  {
-    title: "水害・断水に備える",
-    image: null,
-    alt: "",
-    description:
-      "雨水を一時貯留してから放流するクロスウェーブ。下水道への排水量が一気に増えることを抑えます※1。飲料水貯留システムは、断水時にも普段に近い暮らしを実現。平常時には新鮮な水道水が入れ替ります※2。※1)特定の大型分譲地のみの仕様となります。※2)4日以上水を使用しなかった場合、貯留水の水質が低下している恐れがあるため、最初の70リットルは飲用以外で使用します。1年に1回を目安に作動と取水の確認を行ってください。",
-  },
 ]
 
 export function SmartResilience() {
@@ -121,23 +114,15 @@ export function SmartResilience() {
                   </h3>
 
                   {/* Image */}
-                  {card.image ? (
-                    <div className="mb-4">
-                      <Image
-                        src={card.image}
-                        alt={card.alt}
-                        width={800}
-                        height={450}
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  ) : (
-                    <div className="aspect-[16/9] bg-gray-200 rounded-lg flex items-center justify-center mb-4">
-                      <span className="text-xs text-gray-400">
-                        Image photo
-                      </span>
-                    </div>
-                  )}
+                  <div className="mb-4">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      width={800}
+                      height={450}
+                      className="w-full h-auto"
+                    />
+                  </div>
 
                   {/* Description */}
                   <p className="text-xs md:text-sm leading-relaxed text-[var(--brand-text-muted)]">
