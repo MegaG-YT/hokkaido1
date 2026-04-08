@@ -112,7 +112,7 @@ export function AccessSection() {
               カーアクセスも良好
             </p>
             <h2
-              className="text-5xl md:text-7xl lg:text-8xl tracking-[0.05em] text-white mb-6"
+              className="text-5xl md:text-7xl lg:text-8xl tracking-[0.05em] text-[#a87060] mb-6"
               style={{
                 fontFamily:
                   '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif',
@@ -120,7 +120,7 @@ export function AccessSection() {
             >
               ACCESS
             </h2>
-            <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               JR福島駅周辺へ車で約10分～15分程度。地域内を通る道路網が整備されており、移動の利便性が高いエリアです。住宅地としての需要が高く、利便性と自然のバランスが良いエリアを求める方に適した場所です。
             </p>
           </motion.div>
