@@ -83,7 +83,7 @@ export function SurroundingEnvironment() {
                 />
               </div>
               {/* Sidebar facilities */}
-              <div className="flex flex-row md:flex-col gap-2 md:gap-4 md:w-1/4 px-4 md:px-0">
+              <div className="flex flex-row w-full md:flex-col gap-2 md:gap-4 md:w-1/4 px-4 md:px-0">
                 {SIDEBAR_FACILITIES.map((facility) => (
                   <div key={facility.name} className="w-1/3 shrink-0 md:w-auto md:shrink">
                     <div className="relative h-20 md:h-auto md:aspect-[4/3] overflow-hidden">
