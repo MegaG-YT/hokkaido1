@@ -3,7 +3,6 @@
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 import Image from "next/image"
-import { SectionDivider } from "@/components/shared/section-divider"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 const SIDEBAR_FACILITIES = [
@@ -30,7 +29,6 @@ export function SurroundingEnvironment() {
 
   return (
     <>
-      <SectionDivider title="周辺環境・生活情報" />
       <SectionWrapper id="surrounding-environment">
         <div
           className="relative py-16 md:py-24"

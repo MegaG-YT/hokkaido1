@@ -2,7 +2,6 @@
 
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
-import { SectionDivider } from "@/components/shared/section-divider"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 const CARDS = [
@@ -45,7 +44,6 @@ export function SmartResilience() {
 
   return (
     <>
-      <SectionDivider title="SMART＆RESILIENCE" />
       <SectionWrapper id="smart-resilience">
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
           {/* Heading */}

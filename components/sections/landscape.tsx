@@ -3,7 +3,6 @@
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 import Image from "next/image"
-import { SectionDivider } from "@/components/shared/section-divider"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 export function Landscape() {
@@ -21,7 +20,6 @@ export function Landscape() {
 
   return (
     <>
-      <SectionDivider title="セキスイハイムのまちづくり" />
       <SectionWrapper id="landscape">
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
           <motion.div {...animate()} className="text-center">
