@@ -86,7 +86,7 @@ export function SurroundingEnvironment() {
               <div className="flex flex-row md:flex-col gap-2 md:gap-4 md:w-1/4 px-4 md:px-0">
                 {SIDEBAR_FACILITIES.map((facility) => (
                   <div key={facility.name} className="w-1/3 md:w-auto">
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative h-20 md:h-auto md:aspect-[4/3] overflow-hidden">
                       <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
                     </div>
                     <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
