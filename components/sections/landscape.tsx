@@ -83,7 +83,7 @@ export function Landscape() {
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
                 自然の心地よさを
               </h3>
-              <div className="relative w-full aspect-[4/5] mb-6">
+              <div className="relative w-full aspect-[4/3] mb-6">
                 <Image
                   src="/images/landscape-building-layout.png"
                   alt="建物配置の計画図 - 風通し、日差し、南庭を考慮した配置"
@@ -104,7 +104,7 @@ export function Landscape() {
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
                 プライバシーに配慮して部屋や窓を設計
               </h3>
-              <div className="relative w-full aspect-[16/9] mb-6">
+              <div className="relative w-full aspect-[4/3] mb-6">
                 <Image
                   src="/images/landscape-privacy.png"
                   alt="プライバシー配慮の設計図 - 隣地境界線より2.5m未満の開口部は不可視なものに"
@@ -114,6 +114,45 @@ export function Landscape() {
               </div>
               <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
                 互いに住み良い環境をつくるため、お隣同士の部屋の配置、窓の向き合いを調整することが必要です。隣地建物に面している窓やドアは、マスタープラン（全体計画）で指定されている側をカスミガラスなどの不可視なものにします。
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Two-column photos */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Left - Greenery */}
+            <motion.div {...animate(0.6)}>
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
+                豊かな緑で彩られるまち
+              </h3>
+              <div className="relative w-full aspect-[4/3] mb-6">
+                <Image
+                  src="/images/landscape-greenery.png"
+                  alt="豊かな緑に囲まれた街並みを歩く家族"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
+                マスタープラン（全体計画）に示す植栽は、大切な景観ポイントです。シンボルツリー等、その他の中木と低木や地被植物を適切に配置し、それらを組み合わせることで美しいまちなみとして周辺環境へと繋がっていきます。
+              </p>
+            </motion.div>
+
+            {/* Right - Lighting */}
+            <motion.div {...animate(0.7)}>
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
+                外灯でまちを美しくライトアップ
+              </h3>
+              <div className="relative w-full aspect-[4/3] mb-6">
+                <Image
+                  src="/images/landscape-lighting.png"
+                  alt="外灯で美しくライトアップされた夜の街並みイラスト"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
+                通り沿いに連続する灯りで夜の美しいまちなみを演出し、防犯性も高めます。このために、全ての区画に門灯・植栽灯を各1灯以上設けます。（屋外照明計2灯以上）
               </p>
             </motion.div>
           </div>
