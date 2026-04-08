@@ -69,25 +69,26 @@ export function AssetValue() {
             </p>
           </motion.div>
 
-          {/* Aerial map image */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={
-              prefersReducedMotion
-                ? { duration: 0 }
-                : { duration: 0.6, delay: 0.3, ease: "easeOut" }
-            }
-            className="mt-10 md:mt-14 relative w-full aspect-[16/9] overflow-hidden rounded-2xl"
-          >
-            <Image
-              src="/images/asset-value-map.png"
-              alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
-              fill
-              className="object-cover"
-            />
-          </motion.div>
         </div>
+
+        {/* Aerial map image — full width */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={
+            prefersReducedMotion
+              ? { duration: 0 }
+              : { duration: 0.6, delay: 0.3, ease: "easeOut" }
+          }
+          className="mt-10 md:mt-14 relative w-full aspect-[16/9] overflow-hidden"
+        >
+          <Image
+            src="/images/asset-value-map.png"
+            alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
       </SectionWrapper>
     </div>
   )

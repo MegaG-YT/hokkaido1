@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
+import Image from "next/image"
 import { SectionDivider } from "@/components/shared/section-divider"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
@@ -10,21 +11,20 @@ export function Landscape() {
   const isInView = useInView(ref, { once: true, margin: "-100px 0px 0px 0px" })
   const prefersReducedMotion = useReducedMotion()
 
+  const animate = (delay = 0) => ({
+    initial: { opacity: 0, y: 30 },
+    animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
+    transition: prefersReducedMotion
+      ? { duration: 0 }
+      : { duration: 0.6, ease: "easeOut" as const, delay },
+  })
+
   return (
     <>
       <SectionDivider title="セキスイハイムのまちづくり" />
       <SectionWrapper id="landscape">
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={
-              prefersReducedMotion
-                ? { duration: 0 }
-                : { duration: 0.6, ease: "easeOut" }
-            }
-            className="text-center"
-          >
+          <motion.div {...animate()} className="text-center">
             {/* Heading */}
             <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed">
               街全体をデザインする、
@@ -52,6 +52,73 @@ export function Landscape() {
               統一された外構計画により美しい街並みと快適な暮らしを実現します。
             </p>
           </motion.div>
+
+          {/* Main landscape illustration */}
+          <motion.div {...animate(0.2)} className="mt-12">
+            <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/images/landscape-machinami.png"
+                alt="まちなみデザインガイドライン - 街並みの完成イメージイラスト"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* Planting caption */}
+          <motion.div {...animate(0.3)} className="mt-8 flex justify-center">
+            <div className="relative w-full max-w-4xl">
+              <Image
+                src="/images/landscape-planting-caption.png"
+                alt="マスタープラン（全体計画）に示す植栽は、大切な景観ポイントです。シンボルツリー等、その他の中木と低木や地被植物を適切に配置し、それらを組み合わせることで美しいまちなみとして周辺環境へと繋がっていきます。"
+                width={1200}
+                height={60}
+                className="w-full h-auto"
+              />
+            </div>
+          </motion.div>
+
+          {/* Two-column diagrams */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Left column - Building layout */}
+            <motion.div {...animate(0.4)}>
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
+                自然の心地よさを
+              </h3>
+              <div className="relative w-full aspect-[4/5] mb-6">
+                <Image
+                  src="/images/landscape-building-layout.png"
+                  alt="建物配置の計画図 - 風通し、日差し、南庭を考慮した配置"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
+                建物が無秩序に並ぶと、日照や通風、プライバシーの確保が難しくなるため、まち全体の調和を考えて計画的に建物と庭を配置します。
+              </p>
+              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed mt-2">
+                デザインガイドラインによりマスタープラン（全体計画）で設定した南庭の位置を守り、建物を配置します。
+              </p>
+            </motion.div>
+
+            {/* Right column - Privacy */}
+            <motion.div {...animate(0.5)}>
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
+                プライバシーに配慮して部屋や窓を設計
+              </h3>
+              <div className="relative w-full aspect-[16/9] mb-6">
+                <Image
+                  src="/images/landscape-privacy.png"
+                  alt="プライバシー配慮の設計図 - 隣地境界線より2.5m未満の開口部は不可視なものに"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
+                互いに住み良い環境をつくるため、お隣同士の部屋の配置、窓の向き合いを調整することが必要です。隣地建物に面している窓やドアは、マスタープラン（全体計画）で指定されている側をカスミガラスなどの不可視なものにします。
+              </p>
+            </motion.div>
+          </div>
         </div>
       </SectionWrapper>
     </>
