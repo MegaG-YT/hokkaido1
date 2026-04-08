@@ -15,7 +15,7 @@ export function PropertyOverview() {
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
           {/* Section heading */}
           <div className="text-center mb-12 md:mb-16">
-            <p className="text-base md:text-lg lg:text-xl tracking-[0.3em] text-[var(--brand-text-muted)] mb-3">
+            <p className="text-2xl md:text-lg lg:text-xl tracking-[0.3em] text-[#1a1a1a] font-bold mb-3" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               物件概要
             </p>
             <h2

@@ -102,7 +102,7 @@ export function SmartResilience() {
                         }
                   }
                 >
-                  <h3 className="text-sm md:text-base font-bold text-[var(--brand-text)] mb-4 min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center text-center whitespace-pre-line">
+                  <h3 className="text-sm md:text-base font-bold text-[var(--brand-text)] mb-4 min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center text-center whitespace-pre-line" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                     {card.title}
                   </h3>
                   <div className="mb-4">
@@ -140,7 +140,7 @@ export function SmartResilience() {
                         }
                   }
                 >
-                  <h3 className="text-sm md:text-base font-bold text-[var(--brand-text)] mb-4 flex items-center justify-center text-center">
+                  <h3 className="text-sm md:text-base font-bold text-[var(--brand-text)] mb-4 flex items-center justify-center text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                     {card.title}
                   </h3>
                   <div className="mb-4">

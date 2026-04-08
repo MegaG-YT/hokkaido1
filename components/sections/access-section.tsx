@@ -103,7 +103,7 @@ export function AccessSection() {
               鉄道駅が徒歩圏
             </p>
             <p
-              className="text-base md:text-lg text-white mb-4"
+              className="text-base md:text-lg text-white/80 mb-4"
               style={{
                 fontFamily:
                   '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif',
@@ -163,6 +163,7 @@ export function AccessSection() {
                             <p
                               key={detailIndex}
                               className="text-sm md:text-base text-white/90 leading-relaxed"
+                              style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
                             >
                               {detail}
                             </p>
@@ -189,7 +190,7 @@ export function AccessSection() {
                 {note}
               </p>
             ))}
-            <p className="text-[10px] md:text-xs text-white/50 mt-4 text-right">
+            <p className="text-[10px] md:text-xs text-white mt-4 text-right">
               Image photo（福島県福島市のJR「福島」駅から東側の夜景）
             </p>
           </motion.div>
