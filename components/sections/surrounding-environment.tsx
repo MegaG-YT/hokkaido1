@@ -54,10 +54,10 @@ export function SurroundingEnvironment() {
               >
                 LOCATION
               </h2>
-              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold mb-4" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 「岩代清水」駅のすぐ近くに位置し、
               </p>
-              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold mb-4" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 徒歩500m圏内に商業施設や医療施設がそろうロケーション
               </p>
               <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>

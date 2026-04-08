@@ -79,7 +79,7 @@ export function Landscape() {
           {/* Two-column diagrams */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left column - Building layout */}
-            <motion.div {...animate(0.4)}>
+            <motion.div {...animate(0.4)} className="flex flex-col">
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 自然の心地よさを
               </h3>
@@ -91,7 +91,7 @@ export function Landscape() {
                   className="object-contain"
                 />
               </div>
-              <div className="bg-gray-100 rounded p-4">
+              <div className="bg-gray-100 rounded p-4 flex-1 min-h-[7rem]">
                 <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
                   建物が無秩序に並ぶと、日照や通風、プライバシーの確保が難しくなるため、まち全体の調和を考えて計画的に建物と庭を配置します。
                 </p>
@@ -102,7 +102,7 @@ export function Landscape() {
             </motion.div>
 
             {/* Right column - Privacy */}
-            <motion.div {...animate(0.5)}>
+            <motion.div {...animate(0.5)} className="flex flex-col">
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 プライバシーに配慮して部屋や窓を設計
               </h3>
@@ -114,7 +114,7 @@ export function Landscape() {
                   className="object-contain"
                 />
               </div>
-              <div className="bg-gray-100 rounded p-4">
+              <div className="bg-gray-100 rounded p-4 flex-1 min-h-[7rem]">
                 <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
                   互いに住み良い環境をつくるため、お隣同士の部屋の配置、窓の向き合いを調整することが必要です。隣地建物に面している窓やドアは、マスタープラン（全体計画）で指定されている側をカスミガラスなどの不可視なものにします。
                 </p>
@@ -125,7 +125,7 @@ export function Landscape() {
           {/* Two-column photos */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left - Greenery */}
-            <motion.div {...animate(0.6)}>
+            <motion.div {...animate(0.6)} className="flex flex-col">
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 豊かな緑で彩られるまち
               </h3>
@@ -138,7 +138,7 @@ export function Landscape() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="bg-gray-100 rounded p-4">
+              <div className="bg-gray-100 rounded p-4 flex-1 min-h-[7rem]">
                 <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                   マスタープラン（全体計画）に示す植栽は、大切な景観ポイントです。シンボルツリー等、その他の中木と低木や地被植物を適切に配置し、それらを組み合わせることで美しいまちなみとして周辺環境へと繋がっていきます。
                 </p>
@@ -146,7 +146,7 @@ export function Landscape() {
             </motion.div>
 
             {/* Right - Lighting */}
-            <motion.div {...animate(0.7)}>
+            <motion.div {...animate(0.7)} className="flex flex-col">
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 外灯でまちを美しくライトアップ
               </h3>
@@ -159,7 +159,7 @@ export function Landscape() {
                   className="w-full h-auto"
                 />
               </div>
-              <div className="bg-gray-100 rounded p-4">
+              <div className="bg-gray-100 rounded p-4 flex-1 min-h-[7rem]">
                 <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
                   通り沿いに連続する灯りで夜の美しいまちなみを演出し、防犯性も高めます。このために、全ての区画に門灯・植栽灯を各1灯以上設けます。（屋外照明計2灯以上）
                 </p>
