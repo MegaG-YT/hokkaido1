@@ -123,7 +123,7 @@ export function Landscape() {
           </div>
 
           {/* Two-column photos */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <div className="mt-0 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left - Greenery */}
             <motion.div {...animate(0.6)} className="flex flex-col">
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mt-6 mb-2 md:mt-0 md:mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
