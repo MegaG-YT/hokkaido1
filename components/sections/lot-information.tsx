@@ -93,15 +93,26 @@ export function LotInformation() {
               </motion.div>
             </div>
 
-            {/* Plot Map Image */}
+            {/* Plot Map with Roads Layer */}
             <motion.div {...animate(0.3)}>
-              <div className="relative mx-auto w-full max-w-2xl">
+              <div className="relative mx-auto w-full max-w-2xl overflow-hidden">
+                {/* Roads layer (behind) */}
+                <Image
+                  src="/images/lot-plan-roads.webp"
+                  alt=""
+                  width={5187}
+                  height={4519}
+                  className="h-auto w-full"
+                  sizes="(max-width: 768px) 100vw, 672px"
+                  priority={false}
+                />
+                {/* Lot map layer (on top) */}
                 <Image
                   src="/images/lot-plan-map.webp"
                   alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
                   width={2882}
                   height={4005}
-                  className="h-auto w-full"
+                  className="absolute inset-0 h-full w-full object-contain"
                   sizes="(max-width: 768px) 100vw, 672px"
                   priority={false}
                 />
