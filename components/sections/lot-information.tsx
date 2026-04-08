@@ -124,8 +124,8 @@ export function LotInformation() {
                   alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
                   width={2882}
                   height={4005}
-                  className="absolute h-full w-full object-contain"
-                  style={{ top: "0%", left: "5%" }}
+                  className="absolute object-contain"
+                  style={{ top: "0%", left: "5%", width: "99%", height: "99%" }}
                   sizes="(max-width: 768px) 100vw, 672px"
                   priority={false}
                 />
