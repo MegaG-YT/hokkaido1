@@ -53,7 +53,7 @@ export function Landscape() {
 
           {/* Main landscape illustration */}
           <motion.div {...animate(0.2)} className="mt-12">
-            <div className="relative w-full h-screen md:h-auto md:aspect-[16/9]">
+            <div className="relative w-full h-[100vw] md:h-auto md:aspect-[16/9]">
               <Image
                 src="/images/landscape-machinami.png"
                 alt="まちなみデザインガイドライン - 街並みの完成イメージイラスト"
