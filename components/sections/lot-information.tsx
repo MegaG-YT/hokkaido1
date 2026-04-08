@@ -114,7 +114,7 @@ export function LotInformation() {
                   width={5187}
                   height={4519}
                   className="absolute object-cover"
-                  style={{ top: "-3%", left: "-2%", width: "107%", height: "107%" }}
+                  style={{ top: "-3%", left: "-2%", width: "110%", height: "110%" }}
                   sizes="(max-width: 768px) 100vw, 800px"
                   priority={false}
                 />
