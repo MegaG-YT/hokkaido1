@@ -118,15 +118,14 @@ export function LotInformation() {
                   sizes="(max-width: 768px) 100vw, 800px"
                   priority={false}
                 />
-                {/* Lot map layer (top - same scale as roads) */}
+                {/* Lot map layer (top - original size) */}
                 <Image
                   src="/images/lot-plan-map.webp"
                   alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
                   width={2882}
                   height={4005}
-                  className="absolute h-[130%] w-[130%] object-contain"
-                  style={{ top: "-12%", left: "-15%" }}
-                  sizes="(max-width: 768px) 100vw, 800px"
+                  className="absolute inset-0 h-full w-full object-contain"
+                  sizes="(max-width: 768px) 100vw, 672px"
                   priority={false}
                 />
               </div>
