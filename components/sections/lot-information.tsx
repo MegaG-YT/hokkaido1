@@ -94,43 +94,147 @@ export function LotInformation() {
               </motion.div>
             </div>
 
-            {/* Plot Map Layers */}
-            <motion.div {...animate(0.3)}>
-              <div className="relative mx-auto w-full max-w-2xl overflow-hidden">
-                {/* Map background (bottom layer - sets container size) */}
-                <Image
-                  src="/images/lot-map-bg.webp"
-                  alt=""
-                  width={4476}
-                  height={4516}
-                  className="h-auto w-full"
-                  sizes="(max-width: 768px) 100vw, 672px"
-                  priority={false}
-                />
-                {/* Roads layer (middle - scaled up to clip beyond background) */}
-                <Image
-                  src="/images/lot-plan-roads.webp"
-                  alt=""
-                  width={5187}
-                  height={4519}
-                  className="absolute object-cover"
-                  style={{ top: "-5%", left: "0%", width: "110%", height: "110%" }}
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  priority={false}
-                />
-                {/* Lot map layer (top - original size) */}
-                <Image
-                  src="/images/lot-plan-map.webp"
-                  alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
-                  width={2882}
-                  height={4005}
-                  className="absolute object-contain"
-                  style={{ top: "0.4%", left: "6.5%", width: "97.7%", height: "97.7%" }}
-                  sizes="(max-width: 768px) 100vw, 672px"
-                  priority={false}
-                />
-              </div>
-            </motion.div>
+            {/* Plot Map Layers with perspective */}
+            <div style={{ perspective: "1200px" }}>
+              <motion.div
+                {...(prefersReducedMotion
+                  ? {}
+                  : {
+                      initial: { rotateX: 8, scale: 0.95, opacity: 0 },
+                      animate: isInView
+                        ? { rotateX: 0, scale: 1, opacity: 1 }
+                        : { rotateX: 8, scale: 0.95, opacity: 0 },
+                      transition: {
+                        duration: 1.2,
+                        delay: 0.3,
+                        ease: [0.16, 1, 0.3, 1] as [
+                          number,
+                          number,
+                          number,
+                          number,
+                        ],
+                      },
+                    })}
+              >
+                <div className="relative mx-auto w-full max-w-2xl overflow-hidden">
+                  {/* 区画図 badge */}
+                  <motion.div
+                    className="absolute left-4 top-4 z-30 rounded-md bg-[#555555] px-4 py-1.5"
+                    {...(prefersReducedMotion
+                      ? {}
+                      : {
+                          initial: { opacity: 0, x: -20 },
+                          animate: isInView
+                            ? { opacity: 1, x: 0 }
+                            : { opacity: 0, x: -20 },
+                          transition: {
+                            duration: 0.6,
+                            delay: 1.6,
+                            ease: [0.16, 1, 0.3, 1] as [
+                              number,
+                              number,
+                              number,
+                              number,
+                            ],
+                          },
+                        })}
+                  >
+                    <span className="text-sm font-semibold tracking-wider text-white">
+                      区画図
+                    </span>
+                  </motion.div>
+
+                  {/* Map background (bottom layer - sets container size) */}
+                  <Image
+                    src="/images/lot-map-bg.webp"
+                    alt=""
+                    width={4476}
+                    height={4516}
+                    className="h-auto w-full"
+                    sizes="(max-width: 768px) 100vw, 672px"
+                    priority={false}
+                  />
+
+                  {/* Roads layer (middle - appears first) */}
+                  <motion.div
+                    className="absolute inset-0"
+                    {...(prefersReducedMotion
+                      ? {}
+                      : {
+                          initial: { opacity: 0, y: 20 },
+                          animate: isInView
+                            ? { opacity: 1, y: 0 }
+                            : { opacity: 0, y: 20 },
+                          transition: {
+                            duration: 1.0,
+                            delay: 0.5,
+                            ease: [0.16, 1, 0.3, 1] as [
+                              number,
+                              number,
+                              number,
+                              number,
+                            ],
+                          },
+                        })}
+                  >
+                    <Image
+                      src="/images/lot-plan-roads.webp"
+                      alt=""
+                      width={5187}
+                      height={4519}
+                      className="absolute object-cover"
+                      style={{
+                        top: "-5%",
+                        left: "0%",
+                        width: "110%",
+                        height: "110%",
+                      }}
+                      sizes="(max-width: 768px) 100vw, 800px"
+                      priority={false}
+                    />
+                  </motion.div>
+
+                  {/* Lot map layer (top - fades in after roads) */}
+                  <motion.div
+                    className="absolute inset-0"
+                    {...(prefersReducedMotion
+                      ? {}
+                      : {
+                          initial: { opacity: 0, y: 30, scale: 0.98 },
+                          animate: isInView
+                            ? { opacity: 1, y: 0, scale: 1 }
+                            : { opacity: 0, y: 30, scale: 0.98 },
+                          transition: {
+                            duration: 1.2,
+                            delay: 1.0,
+                            ease: [0.16, 1, 0.3, 1] as [
+                              number,
+                              number,
+                              number,
+                              number,
+                            ],
+                          },
+                        })}
+                  >
+                    <Image
+                      src="/images/lot-plan-map.webp"
+                      alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
+                      width={2882}
+                      height={4005}
+                      className="absolute object-contain"
+                      style={{
+                        top: "0.4%",
+                        left: "6.5%",
+                        width: "97.7%",
+                        height: "97.7%",
+                      }}
+                      sizes="(max-width: 768px) 100vw, 672px"
+                      priority={false}
+                    />
+                  </motion.div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
