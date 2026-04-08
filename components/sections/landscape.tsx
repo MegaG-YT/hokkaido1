@@ -52,7 +52,7 @@ export function Landscape() {
           </motion.div>
 
           {/* Main landscape illustration */}
-          <motion.div {...animate(0.2)} className="mt-12">
+          <motion.div {...animate(0.2)} className="mt-12 -mx-4 md:mx-0">
             <div className="relative w-full aspect-[16/9]">
               <Image
                 src="/images/landscape-machinami.png"
