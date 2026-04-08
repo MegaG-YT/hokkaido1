@@ -80,7 +80,7 @@ export function Landscape() {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Left column - Building layout */}
             <motion.div {...animate(0.4)} className="flex flex-col">
-              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mt-6 mb-2 md:mt-0 md:mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mt-0 mb-2 md:mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 自然の心地よさを
               </h3>
               <div className="relative w-full aspect-[4/3] mb-6">
