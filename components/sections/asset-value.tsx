@@ -17,8 +17,7 @@ export function AssetValue() {
         alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
         width={3840}
         height={3597}
-        className="w-[110%] h-auto -ml-[5%]"
-        style={{ transformOrigin: 'top center' }}
+        className="w-full h-auto scale-105 origin-top"
       />
 
       {/* Text content positioned at the top of the image */}
