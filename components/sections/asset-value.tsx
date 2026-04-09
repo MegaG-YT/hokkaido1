@@ -78,13 +78,14 @@ export function AssetValue() {
               ? { duration: 0 }
               : { duration: 0.6, delay: 0.3, ease: "easeOut" }
           }
-          className="mt-10 md:mt-14 relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden"
+          className="mt-10 md:mt-14 relative w-full overflow-hidden"
         >
           <Image
             src="/images/asset-value-map.png"
             alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
-            fill
-            className="object-cover"
+            width={3840}
+            height={3192}
+            className="w-full h-auto"
           />
         </motion.div>
       </SectionWrapper>
