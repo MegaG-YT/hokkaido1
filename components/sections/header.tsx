@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { motion } from "framer-motion"
 import { Menu, ExternalLink } from "lucide-react"
 import {
   Sheet,
@@ -69,15 +70,17 @@ export function Header() {
                   {item.label}
                 </SheetClose>
               ))}
-              <a
+              <motion.a
                 href="#"
                 className="mx-4 mt-6 inline-flex items-center justify-center gap-2 bg-[var(--brand-primary)] text-white px-4 py-3 rounded text-sm"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
                 onClick={() => setOpen(false)}
+                whileTap={{ scale: 0.95, opacity: 0.85 }}
+                transition={{ duration: 0.1 }}
               >
                 <strong>セキスイハイム東北サイトはこちら</strong>
                 <ExternalLink className="h-4 w-4" />
-              </a>
+              </motion.a>
             </nav>
           </SheetContent>
         </Sheet>
