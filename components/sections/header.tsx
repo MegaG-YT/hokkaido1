@@ -86,22 +86,17 @@ export function Header() {
       {/* Nav bar */}
       <nav className="hidden md:block bg-[var(--brand-nav)] overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
-          {NAV_ITEMS.map((item, i) => (
-            <div key={item.id} className="flex-1 flex items-center">
-              <a
-                href={`#${item.id}`}
-                className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 group peer hover:z-10"
-              >
-                <span
-                  className="absolute inset-y-0 -left-[9px] -right-[9px] bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{ clipPath: "polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%)" }}
-                />
-                <span className="relative z-10">{item.label}</span>
-              </a>
-              {i < NAV_ITEMS.length - 1 && (
-                <span className="w-px h-4 bg-white/40 shrink-0 -skew-x-12 transition-opacity duration-200 peer-hover:opacity-0" />
-              )}
-            </div>
+          {NAV_ITEMS.map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 group hover:z-10"
+            >
+              <span
+                className="absolute inset-0 bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity"
+              />
+              <span className="relative z-10">{item.label}</span>
+            </a>
           ))}
         </div>
       </nav>
