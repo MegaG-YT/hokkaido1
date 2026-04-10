@@ -3,7 +3,6 @@
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 import Image from "next/image"
-import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 const SERIF_FONT = '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif'
 
@@ -28,8 +27,8 @@ export function LotInformation() {
   }
 
   return (
-    <SectionWrapper id="lot-information" className="py-0 md:py-0">
-      <div ref={ref} className="relative py-16 md:py-24">
+    <section id="lot-information" className="scroll-mt-32">
+      <div ref={ref} className="relative w-full py-16 md:py-24">
         <Image
           src="/images/lot-bg-texture.png"
           alt=""
@@ -111,6 +110,6 @@ export function LotInformation() {
           </motion.div>
         </div>
       </div>
-    </SectionWrapper>
+    </section>
   )
 }
