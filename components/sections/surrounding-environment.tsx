@@ -114,12 +114,12 @@ export function SurroundingEnvironment() {
               transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: 0.3, ease: "easeOut" }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
             >
-              {GRID_FACILITIES.map((facility) => (
+              {GRID_FACILITIES.map((facility, i) => (
                 <div key={facility.name}>
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image src={facility.src} alt={facility.name} fill className="object-cover" />
                   </div>
-                  <div className="relative z-20 w-full h-2 -top-1 -mb-1" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
+                  <div className={`relative z-20 w-full h-2${[1, 2, 3].includes(i) ? " -top-1 -mb-1" : ""}`} style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                   <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                   <p className="text-[9px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                 </div>
