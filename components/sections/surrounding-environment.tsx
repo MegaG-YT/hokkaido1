@@ -89,7 +89,7 @@ export function SurroundingEnvironment() {
                   alt="スマートハイムシティ泉周辺の地図"
                   width={1200}
                   height={900}
-                  className="w-full h-auto md:absolute md:inset-0 md:w-full md:h-full md:object-cover"
+                  className="w-full h-auto md:absolute md:inset-0 md:w-full md:h-full md:object-contain"
                 />
               </div>
               {/* Sidebar facilities */}
