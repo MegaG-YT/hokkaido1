@@ -96,11 +96,13 @@ export function SurroundingEnvironment() {
               <div className="flex flex-row w-full md:flex-col gap-3 md:gap-4 md:w-1/4 px-4 md:px-0">
                 {SIDEBAR_FACILITIES.map((facility) => (
                   <div key={facility.name} className="flex-1 md:flex-none md:w-auto">
-                    <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3]">
-                      <Image src={facility.src} alt={facility.name} fill className="object-cover overflow-hidden" style={{ objectPosition: facility.objectPosition }} />
-                      <div className="absolute bottom-0 left-0 right-0 h-2 z-20" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
+                    <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3] overflow-hidden">
+                      <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
                     </div>
-                    <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
+                    <div className="flex items-center gap-1.5 mt-1">
+                      <span className="shrink-0 text-[8px] md:text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ backgroundColor: CATEGORY_HEX[facility.category] }}>{facility.category}</span>
+                      <p className="text-[10px] md:text-sm text-[var(--brand-text)] font-bold leading-tight">{facility.name}</p>
+                    </div>
                     <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                   </div>
                 ))}
@@ -116,11 +118,13 @@ export function SurroundingEnvironment() {
             >
               {GRID_FACILITIES.map((facility) => (
                 <div key={facility.name}>
-                  <div className="relative aspect-[4/3]">
-                    <Image src={facility.src} alt={facility.name} fill className="object-cover overflow-hidden" />
-                    <div className="absolute bottom-0 left-0 right-0 h-2 z-20" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image src={facility.src} alt={facility.name} fill className="object-cover" />
                   </div>
-                  <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <span className="shrink-0 text-[8px] md:text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ backgroundColor: CATEGORY_HEX[facility.category] }}>{facility.category}</span>
+                    <p className="text-[10px] md:text-sm text-[var(--brand-text)] font-bold leading-tight">{facility.name}</p>
+                  </div>
                   <p className="text-[9px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                 </div>
               ))}
