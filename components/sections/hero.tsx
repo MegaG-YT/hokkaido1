@@ -84,7 +84,7 @@ export function Hero() {
               <div className="text-center py-1">
                 <h1 className="font-bold" style={{ letterSpacing: '0.15em', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                   <span className="text-[#9e8c5a]" style={{ fontSize: 'clamp(13px, 4vw, 18px)' }}>スマートハイムシティ</span>
-                  <span className="text-[#333333]" style={{ fontSize: 'clamp(17px, 5.5vw, 24px)' }}>泉</span>
+                  <span className="text-[#9e8c5a]" style={{ fontSize: 'clamp(17px, 5.5vw, 24px)' }}>泉</span>
                 </h1>
               </div>
             </div>
@@ -116,7 +116,7 @@ export function Hero() {
                 <span className="text-[#9e8c5a]" style={{ fontSize: 'clamp(0.8rem, 3.8vw, 3rem)' }}>
                   スマートハイムシティ
                 </span>
-                <span className="text-[#333333]" style={{ fontSize: 'clamp(1rem, 5vw, 4rem)' }}>
+                <span className="text-[#9e8c5a]" style={{ fontSize: 'clamp(1rem, 5vw, 4rem)' }}>
                   泉
                 </span>
               </h1>
