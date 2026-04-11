@@ -8,11 +8,11 @@ import { SectionWrapper } from "@/components/shared/section-wrapper"
 type Category = "商業施設" | "鉄道駅" | "教育機関・学校" | "病院・クリニック" | "公共機関・金融機関"
 
 const CATEGORY_HEX: Record<Category, string> = {
-  "商業施設":         "#F59E0B",
-  "鉄道駅":           "#3B82F6",
-  "教育機関・学校":   "#10B981",
-  "病院・クリニック": "#EF4444",
-  "公共機関・金融機関": "#8B5CF6",
+  "商業施設":           "#b8924a",
+  "鉄道駅":             "#2d5f8a",
+  "教育機関・学校":     "#5a7a5c",
+  "病院・クリニック":   "#8b5a52",
+  "公共機関・金融機関": "#6b7a8d",
 }
 
 const SIDEBAR_FACILITIES: { src: string; name: string; distance: string; objectPosition: string; category: Category }[] = [
