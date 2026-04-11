@@ -112,10 +112,11 @@ export function AccessSection() {
               カーアクセスも良好
             </p>
             <h2
-              className="text-5xl md:text-7xl lg:text-8xl tracking-[0.05em] text-[#a87060] mb-6"
+              className="text-5xl md:text-7xl lg:text-8xl tracking-[0.05em] mb-6"
               style={{
                 fontFamily:
                   '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif',
+                color: '#b5476e',
               }}
             >
               ACCESS
