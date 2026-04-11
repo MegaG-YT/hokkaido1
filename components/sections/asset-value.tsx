@@ -34,13 +34,13 @@ export function AssetValue() {
             }
             className="text-center mb-8 md:mb-12"
           >
-            <p className="md:text-lg leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem', color: '#8b4030' }}>
+            <p className="md:text-lg leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem', color: '#7a5550' }}>
               &ldquo;泉&rdquo;は、将来的に人が集まる場所へ
             </p>
-            <p className="md:text-lg leading-relaxed mb-6" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem', color: '#8b4030' }}>
+            <p className="md:text-lg leading-relaxed mb-6" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem', color: '#7a5550' }}>
               資産価値としての可能性
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', color: '#8b4030' }}>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', color: '#7a5550' }}>
               ASSET VALUE
             </h2>
           </motion.div>
