@@ -106,7 +106,7 @@ export function Landscape() {
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mt-6 mb-2 md:mt-0 md:mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 プライバシーに配慮して部屋や窓を設計
               </h3>
-              <div className="relative w-3/4 mx-auto aspect-[4/3] mb-6">
+              <div className="relative w-1/2 mx-auto aspect-[4/3] mb-6">
                 <Image
                   src="/images/landscape-privacy.png"
                   alt="プライバシー配慮の設計図 - 隣地境界線より2.5m未満の開口部は不可視なものに"
