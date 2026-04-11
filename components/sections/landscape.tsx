@@ -84,7 +84,7 @@ export function Landscape() {
                 自然の心地よさを
               </h3>
               <div className="relative w-full aspect-[4/3] mb-6 flex items-center justify-center">
-                <div className="relative w-3/4 h-full">
+                <div className="relative w-[65%] h-full">
                   <Image
                     src="/images/landscape-building-layout.png"
                     alt="建物配置の計画図 - 風通し、日差し、南庭を考慮した配置"
