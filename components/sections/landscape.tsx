@@ -83,13 +83,15 @@ export function Landscape() {
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mt-0 mb-2 md:mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 自然の心地よさを
               </h3>
-              <div className="relative w-full aspect-[4/3] mb-6">
-                <Image
-                  src="/images/landscape-building-layout.png"
-                  alt="建物配置の計画図 - 風通し、日差し、南庭を考慮した配置"
-                  fill
-                  className="object-contain"
-                />
+              <div className="relative w-full aspect-[4/3] mb-6 flex items-center justify-center">
+                <div className="relative w-3/4 h-full">
+                  <Image
+                    src="/images/landscape-building-layout.png"
+                    alt="建物配置の計画図 - 風通し、日差し、南庭を考慮した配置"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
               <div className="bg-gray-100 rounded p-4 flex-1 min-h-[7rem]">
                 <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
@@ -107,7 +109,7 @@ export function Landscape() {
                 プライバシーに配慮して部屋や窓を設計
               </h3>
               <div className="relative w-full aspect-[4/3] mb-6 flex items-center justify-center">
-                <div className="relative w-3/4 h-full">
+                <div className="relative w-[85%] h-full">
                   <Image
                     src="/images/landscape-privacy.png"
                     alt="プライバシー配慮の設計図 - 隣地境界線より2.5m未満の開口部は不可視なものに"
