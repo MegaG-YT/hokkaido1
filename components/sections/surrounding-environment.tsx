@@ -7,12 +7,12 @@ import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 type Category = "商業施設" | "鉄道駅" | "教育機関・学校" | "病院・クリニック" | "公共機関・金融機関"
 
-const CATEGORY_COLORS: Record<Category, string> = {
-  "商業施設":       "bg-[#F59E0B] text-white",
-  "鉄道駅":         "bg-[#3B82F6] text-white",
-  "教育機関・学校": "bg-[#10B981] text-white",
-  "病院・クリニック": "bg-[#EF4444] text-white",
-  "公共機関・金融機関": "bg-[#8B5CF6] text-white",
+const CATEGORY_HEX: Record<Category, string> = {
+  "商業施設":         "#F59E0B",
+  "鉄道駅":           "#3B82F6",
+  "教育機関・学校":   "#10B981",
+  "病院・クリニック": "#EF4444",
+  "公共機関・金融機関": "#8B5CF6",
 }
 
 const SIDEBAR_FACILITIES: { src: string; name: string; distance: string; objectPosition: string; category: Category }[] = [
@@ -96,9 +96,9 @@ export function SurroundingEnvironment() {
               <div className="flex flex-row w-full md:flex-col gap-3 md:gap-4 md:w-1/4 px-4 md:px-0">
                 {SIDEBAR_FACILITIES.map((facility) => (
                   <div key={facility.name} className="flex-1 md:flex-none md:w-auto">
-                    <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3] overflow-hidden">
+                    <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3] overflow-hidden" style={{ borderBottom: `4px solid ${CATEGORY_HEX[facility.category]}` }}>
                       <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
-                      <span className={`absolute top-1 left-1 text-[8px] md:text-[10px] font-bold px-1.5 py-0.5 rounded ${CATEGORY_COLORS[facility.category]}`}>{facility.category}</span>
+                      <span className="absolute top-1.5 left-1.5 w-2.5 h-2.5 rounded-full" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                     </div>
                     <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                     <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
@@ -116,9 +116,9 @@ export function SurroundingEnvironment() {
             >
               {GRID_FACILITIES.map((facility) => (
                 <div key={facility.name}>
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[4/3] overflow-hidden" style={{ borderBottom: `4px solid ${CATEGORY_HEX[facility.category]}` }}>
                     <Image src={facility.src} alt={facility.name} fill className="object-cover" />
-                    <span className={`absolute top-1 left-1 text-[8px] md:text-[10px] font-bold px-1.5 py-0.5 rounded ${CATEGORY_COLORS[facility.category]}`}>{facility.category}</span>
+                    <span className="absolute top-1.5 left-1.5 w-2.5 h-2.5 rounded-full" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                   </div>
                   <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                   <p className="text-[9px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
