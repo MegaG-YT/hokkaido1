@@ -20,6 +20,16 @@ export function AssetValue() {
         className="w-full h-auto scale-105 origin-top"
       />
 
+      {/* Disclaimer — bottom-right corner of the image */}
+      <div className="absolute bottom-0 right-0 z-10 max-w-xs md:max-w-sm lg:max-w-md p-3 md:p-4" style={{ backgroundColor: 'rgba(0,0,0,0.55)' }}>
+        <p className="text-[10px] md:text-xs leading-relaxed text-white/90">
+          ※掲載の現地写真は2023年11月に撮影したものに一部CG処理を施したもので実際とは多少異なります。現地を示す光の柱は土地の規模や高さ等を表したものではありません。主要道路や鉄道路線を一部光の線で表しています。
+        </p>
+        <p className="text-[10px] md:text-xs leading-relaxed text-white/90 mt-1">
+          ※地平線周辺の山の稜線と空は、空現地写真に合成したイメージで実際と異なります。
+        </p>
+      </div>
+
       {/* Text content positioned at the top of the image */}
       <div className="absolute inset-x-0 top-0 z-10 pt-12 md:pt-20 lg:pt-24">
         <div className="mx-auto max-w-7xl px-4">
