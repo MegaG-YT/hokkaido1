@@ -1,9 +1,7 @@
 "use client"
 
 import { useRef } from "react"
-import Image from "next/image"
 import { motion, useInView, useReducedMotion } from "framer-motion"
-import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 export function PropertyOverview() {
   const ref = useRef<HTMLDivElement>(null)
@@ -12,16 +10,18 @@ export function PropertyOverview() {
 
   return (
     <>
-      <SectionWrapper id="property-overview" className="relative">
-        <Image
-          src="/images/outline-section-bg.png"
-          alt=""
-          fill
-          className="object-cover pointer-events-none select-none -z-0"
-          sizes="100vw"
-          priority={false}
-        />
-        <div className="relative z-10 mx-auto max-w-7xl px-4" ref={ref}>
+      <section
+        id="property-overview"
+        className="scroll-mt-32 py-10 md:py-16"
+        style={{
+          backgroundImage: "url('/images/outline-section-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "#FAF0E4",
+        }}
+      >
+        <div className="mx-auto max-w-7xl px-4" ref={ref}>
           {/* Section heading */}
           <div className="text-center mb-12 md:mb-16">
             <p className="text-2xl md:text-lg lg:text-xl tracking-[0.3em] text-[#1a1a1a] font-bold mb-3" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
@@ -99,7 +99,7 @@ export function PropertyOverview() {
             </div>
           </motion.div>
         </div>
-      </SectionWrapper>
+      </section>
     </>
   )
 }
