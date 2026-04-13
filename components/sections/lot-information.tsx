@@ -110,24 +110,17 @@ export function LotInformation() {
             </div>
           </motion.div>
 
-          {/* Plot Map with outline background frame */}
+          {/* Plot Map with light background */}
           <motion.div
-            className="relative mx-auto w-full max-w-2xl p-4 md:p-6"
+            className="mx-auto w-full max-w-2xl bg-white/20 backdrop-blur-sm p-4 md:p-6"
             {...animate(0.3)}
           >
-            <Image
-              src="/images/lot-map-outline-bg.png"
-              alt=""
-              fill
-              className="object-fill pointer-events-none select-none"
-              sizes="(max-width: 768px) 100vw, 672px"
-            />
             <Image
               src="/images/lot-plan-combined.png"
               alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
               width={1200}
               height={1800}
-              className="relative h-auto w-full"
+              className="h-auto w-full"
               sizes="(max-width: 768px) 100vw, 672px"
             />
           </motion.div>

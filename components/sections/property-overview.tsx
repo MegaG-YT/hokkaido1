@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import Image from "next/image"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
@@ -26,7 +27,7 @@ export function PropertyOverview() {
             </h2>
           </div>
 
-          {/* White content box */}
+          {/* Outlined content box */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -35,9 +36,17 @@ export function PropertyOverview() {
                 ? { duration: 0 }
                 : { duration: 0.6, ease: "easeOut" }
             }
-            className="bg-white rounded-lg p-6 md:p-10 shadow-sm"
+            className="relative p-6 md:p-10"
           >
-            <div className="space-y-8 text-xs md:text-sm leading-relaxed text-[var(--brand-text)]">
+            <Image
+              src="/images/outline-bg.png"
+              alt=""
+              fill
+              className="object-fill pointer-events-none select-none"
+              sizes="(max-width: 768px) 100vw, 1280px"
+              priority={false}
+            />
+            <div className="relative space-y-8 text-xs md:text-sm leading-relaxed text-[var(--brand-text)]">
               {/* 全体概要 */}
               <div>
                 <h3 className="font-bold mb-2">【スマートハイムシティ泉　全体概要】</h3>
