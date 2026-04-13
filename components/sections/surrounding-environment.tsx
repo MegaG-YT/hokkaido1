@@ -93,7 +93,7 @@ export function SurroundingEnvironment() {
                 />
               </div>
               {/* Sidebar facilities */}
-              <div className="flex flex-row w-full md:flex-col gap-3 md:gap-4 md:w-1/4 px-4 md:px-0">
+              <div className="flex flex-row w-full md:flex-col gap-3 md:gap-4 md:w-1/4 md:px-0">
                 {SIDEBAR_FACILITIES.map((facility) => (
                   <div key={facility.name} className="flex-1 md:flex-none md:w-auto rounded-lg p-2" style={{ backgroundColor: `${CATEGORY_HEX[facility.category]}55` }}>
                     <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3] overflow-hidden rounded">
