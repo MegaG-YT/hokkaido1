@@ -67,11 +67,8 @@ export function AssetValue() {
   return (
     <section id="asset-value" className="scroll-mt-32" ref={ref}>
 
-      {/* ── Mobile: stacked layout ── */}
+      {/* ── Mobile: headings over image, card below ── */}
       <div className="md:hidden">
-        <div className="text-center pt-10 px-4">
-          {headingBlock}
-        </div>
         <div className="relative">
           <Image
             src="/images/asset-value-map.png"
@@ -80,6 +77,9 @@ export function AssetValue() {
             height={3597}
             className="w-full h-auto"
           />
+          <div className="absolute inset-x-0 top-0 pt-10 px-4 text-center">
+            {headingBlock}
+          </div>
           {disclaimer}
         </div>
         <div className="px-4 py-8">
