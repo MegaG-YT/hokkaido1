@@ -12,8 +12,16 @@ export function PropertyOverview() {
 
   return (
     <>
-      <SectionWrapper id="property-overview" className="bg-[#FAF0E4]">
-        <div className="mx-auto max-w-7xl px-4" ref={ref}>
+      <SectionWrapper id="property-overview" className="relative">
+        <Image
+          src="/images/outline-section-bg.png"
+          alt=""
+          fill
+          className="object-cover pointer-events-none select-none -z-0"
+          sizes="100vw"
+          priority={false}
+        />
+        <div className="relative z-10 mx-auto max-w-7xl px-4" ref={ref}>
           {/* Section heading */}
           <div className="text-center mb-12 md:mb-16">
             <p className="text-2xl md:text-lg lg:text-xl tracking-[0.3em] text-[#1a1a1a] font-bold mb-3" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
@@ -27,7 +35,7 @@ export function PropertyOverview() {
             </h2>
           </div>
 
-          {/* Outlined content box */}
+          {/* White content box */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -36,17 +44,9 @@ export function PropertyOverview() {
                 ? { duration: 0 }
                 : { duration: 0.6, ease: "easeOut" }
             }
-            className="relative p-6 md:p-10"
+            className="bg-white rounded-lg p-6 md:p-10 shadow-sm"
           >
-            <Image
-              src="/images/outline-bg.png"
-              alt=""
-              fill
-              className="object-fill pointer-events-none select-none"
-              sizes="(max-width: 768px) 100vw, 1280px"
-              priority={false}
-            />
-            <div className="relative space-y-8 text-xs md:text-sm leading-relaxed text-[var(--brand-text)]">
+            <div className="space-y-8 text-xs md:text-sm leading-relaxed text-[var(--brand-text)]">
               {/* 全体概要 */}
               <div>
                 <h3 className="font-bold mb-2">【スマートハイムシティ泉　全体概要】</h3>
