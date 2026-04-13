@@ -22,11 +22,11 @@ export function AssetValue() {
 
       {/* Disclaimer — bottom-right corner of the image */}
       <div className="absolute bottom-0 right-0 z-10 p-1.5 md:p-2" style={{ backgroundColor: 'rgba(0,0,0,0.55)' }}>
-        <p className="text-[7px] md:text-[9px] leading-relaxed text-white/90 whitespace-nowrap">
-          ※掲載の現地写真は2023年11月に撮影したものに一部CG処理を施したもので実際とは多少異なります。現地を示す光の柱は土地の規模や高さ等を表したものではありません。主要道路や鉄道路線を一部光の線で表しています。
+        <p className="text-[7px] md:text-[9px] leading-relaxed text-white/90 md:whitespace-nowrap">
+          ※掲載の現地写真は2023年11月に撮影したものに一部CG処理を施したもので<br className="md:hidden" />実際とは多少異なります。現地を示す光の柱は土地の規模や高さ等を<br className="md:hidden" />表したものではありません。主要道路や鉄道路線を一部光の線で表しています。
         </p>
         <p className="text-[7px] md:text-[9px] leading-relaxed text-white/90 mt-1">
-          ※地平線周辺の山の稜線と空は、空現地写真に合成したイメージで実際と異なります。
+          ※地平線周辺の山の稜線と空は、空現地写真に合成した<br className="md:hidden" />イメージで実際と異なります。
         </p>
       </div>
 
