@@ -129,7 +129,7 @@ export function Hero() {
       </p>
 
       {/* Sales banner */}
-      <div className="mt-4 bg-[#b49033] py-4 md:py-5 px-4 md:px-8 w-screen -mx-4 md:-mx-8">
+      <div className="mt-4 bg-[#b49033] py-4 md:py-5 px-4 md:px-8 w-screen md:-mx-8">
         <div className="flex items-center justify-center text-white" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
           <span className="text-xl md:text-4xl lg:text-5xl font-bold tracking-[0.05em]">第1期　建築条件付土地販売開始!</span>
         </div>
