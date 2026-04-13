@@ -17,8 +17,29 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "スマートハイムシティ泉 | セキスイハイム東北",
-  description: "セキスイハイム東北が贈る、スマートハイムシティ泉の物件情報ページ",
+  metadataBase: new URL("https://www.heim-tohoku.co.jp"),
+  title:
+    "スマートハイムシティ泉｜福島県福島市泉｜分譲住宅（建売住宅）・分譲地（土地）｜セキスイハイム東北",
+  description: "福島県福島市泉の分譲地「スマートハイムシティ泉」の販売情報です",
+  robots: { index: true, follow: true },
+  alternates: { canonical: "https://www.heim-tohoku.co.jp/es/izumi/" },
+  openGraph: {
+    type: "website",
+    title:
+      "スマートハイムシティ泉｜福島県福島市泉｜分譲住宅（建売住宅）・分譲地（土地）｜セキスイハイム東北",
+    description: "福島県福島市泉の分譲地「スマートハイムシティ泉」の販売情報です",
+    url: "https://www.heim-tohoku.co.jp/es/izumi/",
+    siteName:
+      "スマートハイムシティ泉｜福島県福島市泉｜分譲住宅（建売住宅）・分譲地（土地）｜セキスイハイム東北",
+    images: [
+      {
+        url: "https://www.heim-tohoku.co.jp/es/izumi/image/izumi_op.jpg",
+      },
+    ],
+  },
+  twitter: { card: "summary_large_image" },
+  formatDetection: { telephone: false },
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({
