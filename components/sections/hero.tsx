@@ -63,9 +63,9 @@ export function Hero() {
               <motion.div
                 key={cycle}
                 className="absolute inset-0"
-                initial={prefersReducedMotion ? { opacity: 0 } : { x: "100%", opacity: 0 }}
+                initial={prefersReducedMotion ? { opacity: 0 } : { x: "-100%", opacity: 0 }}
                 animate={prefersReducedMotion ? { opacity: 1 } : { x: 0, opacity: 1 }}
-                exit={prefersReducedMotion ? { opacity: 0 } : { x: "-100%", opacity: 0 }}
+                exit={prefersReducedMotion ? { opacity: 0 } : { x: "100%", opacity: 0 }}
                 transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }}
               >
                 <Image src={HERO_IMAGES[cycle * 2 + 1].src} alt={HERO_IMAGES[cycle * 2 + 1].alt} fill className="object-cover" />
