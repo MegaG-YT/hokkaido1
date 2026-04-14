@@ -7,8 +7,8 @@ import Image from "next/image"
 const SERIF_FONT = '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif'
 
 const SALE_LOTS = [
-  { no: "No.2", area: "168.12㎡", pricePerTsubo: "坪単価", price: "販売価格" },
-  { no: "No.3", area: "174.66㎡", pricePerTsubo: "坪単価", price: "販売価格" },
+  { no: "No.3", area: "177.59㎡", pricePerTsubo: "—", price: "13,200,000円" },
+  { no: "No.4", area: "167.98㎡", pricePerTsubo: "—", price: "12,700,000円" },
 ]
 
 export function LotInformation() {
