@@ -277,13 +277,13 @@ export function Landscape() {
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mt-6 mb-2 md:mt-0 md:mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 豊かな緑で彩られるまち
               </h3>
-              <div className="mb-6">
+              <div className="mb-6 relative w-full aspect-[1848/933] overflow-hidden">
                 <Image
                   src="/images/landscape-greenery.jpg"
                   alt="豊かな緑に囲まれた街並みを歩く家族"
-                  width={1848}
-                  height={933}
-                  className="w-full h-auto"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="bg-gray-100 rounded p-4 flex-1 min-h-[7rem]">
