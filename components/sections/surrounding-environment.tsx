@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 import Image from "next/image"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
+import { CtaButtons } from "@/components/shared/cta-buttons"
 
 type Category = "商業施設" | "鉄道駅" | "教育機関・学校" | "病院・クリニック" | "公共機関・金融機関"
 
@@ -134,6 +135,8 @@ export function SurroundingEnvironment() {
               <p>※車による所要時間は、通常（平日正午頃）要する時間です。</p>
               <p>※掲載の写真は2025年11月に撮影されたものです。</p>
             </div>
+
+            <CtaButtons className="mt-12 md:mt-16" />
           </div>
         </div>
       </SectionWrapper>
