@@ -15,7 +15,7 @@ import {
 
 const NAV_ITEMS = [
   { label: "資産価値としての可能性", id: "asset-value" },
-  { label: "周辺環境・生活情報", id: "surrounding-environment" },
+  { label: "周辺環境", id: "surrounding-environment" },
   { label: "アクセス", id: "access" },
   { label: "区画情報", id: "lot-information" },
   { label: "物件概要", id: "property-overview" },
