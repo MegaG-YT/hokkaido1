@@ -133,7 +133,7 @@ export function Landscape() {
           {/* Main landscape illustration — layered animated reveal */}
           <motion.div
             ref={imageRef}
-            className="relative w-full aspect-[16/9] mt-12 overflow-hidden"
+            className="relative w-full max-w-4xl mx-auto aspect-[16/9] mt-12 overflow-hidden"
             variants={prefersReducedMotion ? undefined : stackVariants}
             initial={prefersReducedMotion ? false : "hidden"}
             animate={prefersReducedMotion ? undefined : targetVariant}
