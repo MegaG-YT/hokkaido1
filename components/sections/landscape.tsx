@@ -279,7 +279,7 @@ export function Landscape() {
               </h3>
               <div className="mb-6">
                 <Image
-                  src="/images/landscape-greenery.png"
+                  src="/images/landscape-greenery.jpg"
                   alt="豊かな緑に囲まれた街並みを歩く家族"
                   width={1848}
                   height={933}
