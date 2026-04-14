@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
+import { CtaButtons } from "@/components/shared/cta-buttons"
 
 export function PropertyOverview() {
   const ref = useRef<HTMLDivElement>(null)
@@ -90,6 +91,10 @@ export function PropertyOverview() {
               </div>
             </div>
           </motion.div>
+
+          <div className="mt-12 md:mt-16">
+            <CtaButtons />
+          </div>
         </div>
       </section>
     </>
