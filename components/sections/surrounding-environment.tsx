@@ -17,20 +17,20 @@ const CATEGORY_HEX: Record<Category, string> = {
 }
 
 const SIDEBAR_FACILITIES: { src: string; name: string; distance: string; objectPosition: string; category: Category }[] = [
-  { src: "/images/location-york-benimaru.png", name: "ヨークベニマル", distance: "約740〜820m", objectPosition: "center", category: "商業施設" },
-  { src: "/images/location-kawachi.png", name: "カワチ薬品 福島西店", distance: "約740〜820m", objectPosition: "top", category: "商業施設" },
-  { src: "/images/location-seven-eleven.png", name: "セブンイレブン", distance: "約000〜000m", objectPosition: "bottom", category: "商業施設" },
+  { src: "/images/location-york-benimaru.png", name: "ヨークベニマル", distance: "約550〜560m（徒歩7分）", objectPosition: "center", category: "商業施設" },
+  { src: "/images/location-kawachi.png", name: "カワチ薬品 福島西店", distance: "約830〜840m（徒歩11分）", objectPosition: "top", category: "商業施設" },
+  { src: "/images/location-seven-eleven.png", name: "セブンイレブン", distance: "約760〜770m（徒歩10分）", objectPosition: "bottom", category: "商業施設" },
 ]
 
 const GRID_FACILITIES: { src: string; name: string; distance: string; category: Category }[] = [
-  { src: "/images/location-iwashiro-shimizu-station.png", name: "福島交通飯坂線「岩代清水」駅", distance: "約180〜260m（徒歩3〜4分）", category: "鉄道駅" },
-  { src: "/images/location-shimizu-elementary.png", name: "福島市立清水小学校", distance: "約770〜850m（徒歩10〜11分）", category: "教育機関・学校" },
-  { src: "/images/location-shimizu-middle-school.png", name: "福島市立清水中学校", distance: "約1,500〜1,580m（徒歩19〜20分）", category: "教育機関・学校" },
-  { src: "/images/location-izumi-post-office.png", name: "泉郵便局", distance: "約290〜370m", category: "公共機関・金融機関" },
-  { src: "/images/location-sakai-eye-clinic.png", name: "さかい眼科", distance: "約120〜200m", category: "病院・クリニック" },
-  { src: "/images/location-kitamura-orthopedics.png", name: "きたむら整形外科", distance: "約130〜270m", category: "病院・クリニック" },
-  { src: "/images/location-shimizu-branch-office.png", name: "福島市役所清水支所", distance: "約590〜670m", category: "公共機関・金融機関" },
-  { src: "/images/location-odanikonioko-clinic.png", name: "おだニコニコこどもクリニック", distance: "約240〜320m", category: "病院・クリニック" },
+  { src: "/images/location-iwashiro-shimizu-station.png", name: "福島交通飯坂線「岩代清水」駅", distance: "約270〜280m（徒歩4分）", category: "鉄道駅" },
+  { src: "/images/location-shimizu-elementary.png", name: "福島市立清水小学校", distance: "約860〜870m（徒歩11分）", category: "教育機関・学校" },
+  { src: "/images/location-shimizu-middle-school.png", name: "福島市立清水中学校", distance: "約1,590〜1,600m（徒歩20分）", category: "教育機関・学校" },
+  { src: "/images/location-izumi-post-office.png", name: "泉郵便局", distance: "約380〜460m（徒歩5〜6分）", category: "公共機関・金融機関" },
+  { src: "/images/location-sakai-eye-clinic.png", name: "さかい眼科", distance: "約210〜290m（徒歩3〜4分）", category: "病院・クリニック" },
+  { src: "/images/location-kitamura-orthopedics.png", name: "きたむら整形外科", distance: "約220〜360m（徒歩3〜4分）", category: "病院・クリニック" },
+  { src: "/images/location-shimizu-branch-office.png", name: "福島市役所清水支所", distance: "約680〜760m（徒歩9〜10分）", category: "公共機関・金融機関" },
+  { src: "/images/location-odanikonioko-clinic.png", name: "おだニコニコこどもクリニック", distance: "約330〜410m（徒歩5〜6分）", category: "病院・クリニック" },
 ]
 
 export function SurroundingEnvironment() {
