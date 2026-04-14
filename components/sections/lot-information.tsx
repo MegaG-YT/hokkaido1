@@ -35,7 +35,7 @@ export function LotInformation() {
     <section id="lot-information" className="scroll-mt-32">
       <div ref={ref} className="relative py-16 md:py-24">
         <Image
-          src="/images/lot-bg-new.png"
+          src="/images/lot-bg-edited.png"
           alt=""
           fill
           className="object-cover"
