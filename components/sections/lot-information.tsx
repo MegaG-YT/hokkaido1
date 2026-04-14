@@ -101,10 +101,6 @@ export function LotInformation() {
           {/* Legend */}
           <motion.div className="mx-auto max-w-2xl mb-6 space-y-2" {...animate(0.25)}>
             <div className="flex items-center gap-3">
-              <span className="inline-block w-8 h-5 bg-[#D4DFC4] border border-gray-400" />
-              <span className="text-xs md:text-sm text-white/90" style={{ fontFamily: SERIF_FONT }}>：建築条件付土地（予告）</span>
-            </div>
-            <div className="flex items-center gap-3">
               <span className="inline-block w-8 h-5 bg-[#3D5A2E] border border-gray-400" />
               <span className="text-xs md:text-sm text-white/90" style={{ fontFamily: SERIF_FONT }}>：建築条件付土地（販売中）</span>
             </div>
