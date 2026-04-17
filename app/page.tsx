@@ -21,9 +21,9 @@ export default function Home() {
         <Landscape />
         <SmartResilience />
         <section className="bg-white">
-          <div className="mx-auto max-w-7xl px-4 py-4 md:py-6">
+          <div className="mx-auto max-w-7xl px-4 pt-1 pb-4 md:pt-2 md:pb-6">
             <p
-              className="text-[10px] md:text-xs leading-relaxed text-[var(--brand-text-muted)] text-center md:text-left"
+              className="text-[10px] md:text-xs leading-relaxed text-[var(--brand-text-muted)] text-center"
               style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
             >
               ※建築ガイドライン：建築にあたり、当販売団地におけるガイドラインに沿ったご提案をさせていただきますのでご理解とご協力をお願いいたします。
