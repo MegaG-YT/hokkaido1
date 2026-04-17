@@ -38,7 +38,9 @@ export function Header() {
 
         {/* Desktop external link */}
         <a
-          href="#"
+          href="https://www.heim-tohoku.co.jp/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 border border-[var(--brand-primary)] text-[var(--brand-primary)] px-4 py-2 rounded text-sm hover:bg-[var(--brand-primary)] hover:text-white transition-colors"
           style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
         >
@@ -71,7 +73,9 @@ export function Header() {
                 </SheetClose>
               ))}
               <motion.a
-                href="#"
+                href="https://www.heim-tohoku.co.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mx-4 mt-6 inline-flex items-center justify-center gap-2 bg-[var(--brand-primary)] text-white px-4 py-3 rounded text-sm"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
                 onClick={() => setOpen(false)}
