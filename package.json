@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "build:cms": "next build && node build-for-cms.mjs",
+    "build": "next build --webpack",
+    "build:cms": "next build --webpack && node build-for-cms.mjs",
     "start": "next start",
     "lint": "eslint"
   },

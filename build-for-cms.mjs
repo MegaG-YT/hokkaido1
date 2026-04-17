@@ -221,6 +221,16 @@ for (const rel of walk(STAGE)) {
   );
   body = body.replace(/\/_next\/static\/media\/[A-Za-z0-9._~-]+/g, "");
 
+  // Next.js's runtime uses document.currentScript.src to derive the asset
+  // prefix and throws an InvariantError if the URL does not contain
+  // "/_next/". Since we moved scripts to /js/, swap the assertion so it
+  // accepts our new path, and point the webpack public path at "/" for
+  // any dynamic chunk loading.
+  if (ext === ".js") {
+    body = body.replace(/\.indexOf\("\/_next\/"\)/g, '.indexOf("/js/")');
+    body = body.replace(/"\/_next\/"/g, '"/"');
+  }
+
   if (body !== before) fs.writeFileSync(rel, body);
 }
 
