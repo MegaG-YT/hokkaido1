@@ -7,8 +7,8 @@ import Image from "next/image"
 const SERIF_FONT = '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif'
 
 const SALE_LOTS = [
-  { no: "No.3", area: "177.59㎡", price: "13,200,000円" },
-  { no: "No.4", area: "167.98㎡", price: "12,700,000円" },
+  { no: "No.3", area: "177.59㎡", pricePerTsubo: "245,719円", price: "13,200,000円" },
+  { no: "No.4", area: "167.98㎡", pricePerTsubo: "249,952円", price: "12,700,000円" },
 ]
 
 export function LotInformation() {
@@ -74,6 +74,7 @@ export function LotInformation() {
                 <tr className="bg-[#555555]/80 text-white">
                   <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">区画No.</th>
                   <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">区画面積</th>
+                  <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">坪単価</th>
                   <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">販売価格</th>
                 </tr>
               </thead>
@@ -82,6 +83,7 @@ export function LotInformation() {
                   <tr key={lot.no} className="bg-white/80 text-[var(--brand-text)]">
                     <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.no}</td>
                     <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.area}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.pricePerTsubo}</td>
                     <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.price}</td>
                   </tr>
                 ))}
