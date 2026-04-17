@@ -126,14 +126,17 @@ for (const [oldRel, newRel] of rename) {
 }
 
 // --- 3. Build the reference-rewrite table
+// Next.js emits root-relative URLs, so we only match the leading-slash
+// form. Matching bare paths too would corrupt anything where the rel
+// path also appears as a substring (Next.js favicon cache-bust query
+// strings, for example).
 
 const refMap = new Map();
 for (const [oldRel, newRel] of rename) {
   if (!newRel) continue;
-  const oldUrl = oldRel.split(path.sep).join("/");
+  const oldUrl = `/${oldRel.split(path.sep).join("/")}`;
   const newUrl = `/${newRel.split(path.sep).join("/")}`;
-  refMap.set(`/${oldUrl}`, newUrl);
-  refMap.set(oldUrl, newUrl);
+  if (oldUrl !== newUrl) refMap.set(oldUrl, newUrl);
 }
 
 const sortedRefs = [...refMap.entries()].sort((a, b) => b[0].length - a[0].length);
