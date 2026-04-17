@@ -7,8 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-noto-sans-jp), var(--font-inter), "Hiragino Sans",
-    "Meiryo", sans-serif;
+  --font-sans: "Noto Sans JP", "Inter", "Hiragino Sans", "Meiryo", sans-serif;
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-ring: var(--ring);

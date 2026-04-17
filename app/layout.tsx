@@ -1,19 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
 const GTM_ID = "GTM-ML53764B";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const notoSansJP = Noto_Sans_JP({
-  subsets: ["latin"],
-  variable: "--font-noto-sans-jp",
-});
 
 export const viewport: Viewport = {
   themeColor: "#1B3A6B",
@@ -51,11 +40,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ja"
-      className={`${notoSansJP.variable} ${inter.variable} antialiased`}
-    >
+    <html lang="ja" className="antialiased">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+          rel="stylesheet"
+        />
         <Script id="gtm-base" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

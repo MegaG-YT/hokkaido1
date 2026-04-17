@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cms": "next build && node build-for-cms.mjs",
     "start": "next start",
     "lint": "eslint"
   },
