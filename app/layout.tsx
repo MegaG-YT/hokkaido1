@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { PasswordGate } from "@/components/shared/password-gate";
 
 const GTM_ID = "GTM-ML53764B";
 
@@ -69,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        {children}
+        <PasswordGate>{children}</PasswordGate>
       </body>
     </html>
   );
