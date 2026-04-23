@@ -3,6 +3,23 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          commons: {
+            name: "commons",
+            chunks: "all",
+            minChunks: 1,
+          },
+        },
+      };
+      config.optimization.runtimeChunk = false;
+    }
+    return config;
+  },
   async headers() {
     return [
       {

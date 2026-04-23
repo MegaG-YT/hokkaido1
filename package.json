@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack && node bundle-single.mjs",
+    "build": "next build --webpack",
     "build:cms": "next build --webpack && node build-for-cms.mjs",
-    "build:unbundled": "next build --webpack",
     "start": "next start",
     "lint": "eslint"
   },
