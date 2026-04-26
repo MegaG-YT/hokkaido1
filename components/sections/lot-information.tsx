@@ -89,28 +89,13 @@ export function LotInformation() {
             </table>
           </motion.div>
 
-          {/* 区画図 badge */}
-          <motion.div className="text-center mb-6" {...animate(0.2)}>
-            <span className="inline-block bg-[#555555]/80 text-white text-sm md:text-base tracking-widest px-6 py-1.5" style={{ fontFamily: SERIF_FONT }}>
-              区画図
-            </span>
-          </motion.div>
-
-          {/* Legend */}
-          <motion.div className="mx-auto max-w-2xl mb-6 space-y-2" {...animate(0.25)}>
-            <div className="flex items-center gap-3">
-              <span className="inline-block w-8 h-5 bg-[#3D5A2E] border border-gray-400" />
-              <span className="text-xs md:text-sm text-black" style={{ fontFamily: SERIF_FONT }}>：建築条件付土地（販売中）</span>
-            </div>
-          </motion.div>
-
           {/* Plot Map with light background */}
           <motion.div
             className="mx-auto w-full max-w-2xl bg-white/20 backdrop-blur-sm p-4 md:p-6"
-            {...animate(0.3)}
+            {...animate(0.2)}
           >
             <Image
-              src="/images/lot-plan-combined.webp"
+              src="/images/lot-plan-new.webp"
               alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
               width={1200}
               height={1800}
