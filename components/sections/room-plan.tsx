@@ -61,7 +61,7 @@ export function RoomPlan() {
             {/* 免責文 + 完成予想バース — bottom of room-plan-a */}
             <div className="absolute bottom-[420px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 w-[90%]">
               <p
-                className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
+                className="text-[7px] md:text-[8px] text-gray-500 text-left leading-relaxed"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 ※掲載の間取り図は、計画段階の図面を基に描き起こしたもので、実際とは異なる場合があります。家具・備品等は演出用のイメージであり、販売価格には含まれません。掲載の面積は登記簿面積と異なる場合があります。日照・通風・<br />眺望は、季節・時刻・周辺環境により異なります。また、駐車場に記載の車両はイメージであり、販売価格には含まれません。実際の駐車可能車種・サイズには制限があり、道路幅員や車両の形状等により駐車できない場合があります。
@@ -76,7 +76,7 @@ export function RoomPlan() {
             {/* 完成予想CG免責文 — very bottom of room-plan-a */}
             <div className="absolute bottom-[20px] left-1/2 -translate-x-1/2 z-10 w-[90%]">
               <p
-                className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
+                className="text-[7px] md:text-[8px] text-gray-500 text-left leading-relaxed"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 ※掲載の完成予想CGは、計画段階の図面を基に描き起こしたもので実際とは異なります。尚、植栽は実際に植樹する樹形、枝ぶり、葉や花の色合いとは異なる場合があり、特定の季節の状況を示すものではありません。竣工時には完成予想CG程度には成長しておりません。予めご了承ください。施工上やむをえない変更が生じた場合は建物竣工時の状態を優先します。販売価格に家具・照明・調度品・エアコン・備品・車等は含まれておりません。
@@ -134,7 +134,7 @@ export function RoomPlan() {
             </div>
             <div className="absolute bottom-[360px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 w-[90%]">
               <p
-                className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
+                className="text-[7px] md:text-[8px] text-gray-500 text-left leading-relaxed"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 ※掲載の間取り図は、計画段階の図面を基に描き起こしたもので、実際とは異なる場合があります。家具・備品等は演出用のイメージであり、販売価格には含まれません。掲載の面積は登記簿面積と異なる場合があります。日照・通風・眺望は、季節・時刻・周辺環境により異なります。また、駐車場に記載の車両はイメージであり、販売価格には含まれません。実際の駐車可能車種・サイズには制限があり、道路幅員や車両の形状等により駐車できない場合があります。
@@ -148,7 +148,7 @@ export function RoomPlan() {
             </div>
             <div className="absolute bottom-[20px] left-1/2 -translate-x-1/2 z-10 w-[90%]">
               <p
-                className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
+                className="text-[7px] md:text-[8px] text-gray-500 text-left leading-relaxed"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 ※掲載の完成予想CGは、計画段階の図面を基に描き起こしたもので実際とは異なります。尚、植栽は実際に植樹する樹形、枝ぶり、葉や花の色合いとは異なる場合があり、特定の季節の状況を示すものではありません。竣工時には完成予想CG程度には成長しておりません。予めご了承ください。施工上やむをえない変更が生じた場合は建物竣工時の状態を優先します。販売価格に家具・照明・調度品・エアコン・備品・車等は含まれておりません。
@@ -207,7 +207,7 @@ export function RoomPlan() {
             {/* 免責文 — 右側のみ */}
             <div className="absolute bottom-[520px] right-[calc(2%+130px)] z-10 w-[24%]">
               <p
-                className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
+                className="text-[7px] md:text-[8px] text-gray-500 text-left leading-relaxed"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 ※掲載の間取り図は、計画段階の図面を基に描き起こしたもので、実際とは異なる場合があります。家具・備品等は演出用のイメージであり、販売価格には含まれません。掲載の面積は登記簿面積と異なる場合があります。日照・通風・眺望は、季節・時刻・周辺環境により異なります。また、駐車場に記載の車両はイメージであり、販売価格には含まれません。実際の駐車可能車種・サイズには制限があり、道路幅員や車両の形状等により駐車できない場合があります。
@@ -224,7 +224,7 @@ export function RoomPlan() {
             </div>
             <div className="absolute bottom-[20px] left-1/2 -translate-x-1/2 z-10 w-[90%]">
               <p
-                className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
+                className="text-[7px] md:text-[8px] text-gray-500 text-left leading-relaxed"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 ※掲載の完成予想CGは、計画段階の図面を基に描き起こしたもので実際とは異なります。尚、植栽は実際に植樹する樹形、枝ぶり、葉や花の色合いとは異なる場合があり、特定の季節の状況を示すものではありません。竣工時には完成予想CG程度には成長しておりません。予めご了承ください。施工上やむをえない変更が生じた場合は建物竣工時の状態を優先します。販売価格に家具・照明・調度品・エアコン・備品・車等は含まれておりません。
