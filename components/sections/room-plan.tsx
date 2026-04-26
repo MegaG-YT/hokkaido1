@@ -24,76 +24,14 @@ export function RoomPlan() {
         />
 
         {/* B棟 */}
-        <div>
-          <div className="relative">
-            <div className="absolute top-[167px] left-1/2 -translate-x-1/2 z-10">
-              <span
-                className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
-                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
-              >
-                間取図
-              </span>
-            </div>
-            <div className="absolute top-8 left-4 md:left-8 z-10 flex items-center gap-4 md:gap-6">
-              <div className="flex items-center gap-2 md:gap-3">
-                <span className="text-white text-base md:text-lg font-bold tracking-widest" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
-                <div className="bg-white rounded-lg px-3 md:px-5 py-1.5 md:py-2">
-                  <span className="text-3xl md:text-5xl font-bold text-[#1b3a6b]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>B棟</span>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 md:gap-4 scale-[1.2] origin-left">
-                <div className="flex items-center gap-2 md:gap-4">
-                  <div className="border border-white/50 px-2 py-1 text-center">
-                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>建物</span>
-                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>面積</span>
-                  </div>
-                  <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-                    100.98<span className="text-lg md:text-2xl">㎡</span>
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 md:gap-4">
-                  <div className="border border-white/50 px-2 py-1 text-center">
-                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
-                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>面積</span>
-                  </div>
-                  <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-                    193.89<span className="text-lg md:text-2xl">㎡</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="absolute bottom-[360px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 w-[90%]">
-              <p
-                className="text-[7px] md:text-[8px] text-gray-500 text-left leading-relaxed"
-                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
-              >
-                ※掲載の間取り図は、計画段階の図面を基に描き起こしたもので、実際とは異なる場合があります。家具・備品等は演出用のイメージであり、販売価格には含まれません。掲載の面積は登記簿面積と異なる場合があります。日照・通風・眺望は、季節・時刻・周辺環境により異なります。また、駐車場に記載の車両はイメージであり、販売価格には含まれません。実際の駐車可能車種・サイズには制限があり、道路幅員や車両の形状等により駐車できない場合があります。
-              </p>
-              <span
-                className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
-                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
-              >
-                完成予想バース
-              </span>
-            </div>
-            <div className="absolute bottom-[20px] left-1/2 -translate-x-1/2 z-10 w-[90%]">
-              <p
-                className="text-[7px] md:text-[8px] text-gray-500 text-left leading-relaxed"
-                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
-              >
-                ※掲載の完成予想CGは、計画段階の図面を基に描き起こしたもので実際とは異なります。尚、植栽は実際に植樹する樹形、枝ぶり、葉や花の色合いとは異なる場合があり、特定の季節の状況を示すものではありません。竣工時には完成予想CG程度には成長しておりません。予めご了承ください。施工上やむをえない変更が生じた場合は建物竣工時の状態を優先します。販売価格に家具・照明・調度品・エアコン・備品・車等は含まれておりません。
-              </p>
-            </div>
-            <Image
-              src="/images/room-plan-b.webp"
-              alt="ROOM PLAN B - 間取り図"
-              width={1320}
-              height={1574}
-              className="mx-auto h-auto w-full"
-              sizes="(max-width: 768px) 100vw, 1024px"
-            />
-          </div>
-        </div>
+        <Image
+          src="/images/room-plan-b.webp"
+          alt="ROOM PLAN B - 間取り図"
+          width={1654}
+          height={2339}
+          className="mx-auto h-auto w-full"
+          sizes="(max-width: 768px) 100vw, 1024px"
+        />
 
         {/* C棟 */}
         <div>
