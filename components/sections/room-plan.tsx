@@ -16,7 +16,7 @@ export function RoomPlan() {
         {/* 間取図 label */}
         <div className="flex justify-center">
           <span
-            className="border border-[#1b3a6b] px-6 py-2 text-sm md:text-base tracking-[0.2em] text-[#1b3a6b]"
+            className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
             style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
           >
             間取図
@@ -70,6 +70,16 @@ export function RoomPlan() {
             className="mx-auto h-auto w-full"
             sizes="(max-width: 768px) 100vw, 1024px"
           />
+        </div>
+
+        {/* 完成予想バース label */}
+        <div className="flex justify-center">
+          <span
+            className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
+            style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+          >
+            完成予想バース
+          </span>
         </div>
 
         <Image
