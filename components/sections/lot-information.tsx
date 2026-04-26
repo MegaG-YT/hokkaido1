@@ -91,7 +91,7 @@ export function LotInformation() {
 
           {/* Plot Map with light background */}
           <motion.div
-            className="mx-auto w-full max-w-2xl bg-white/20 backdrop-blur-sm p-4 md:p-6"
+            className="mx-auto w-full max-w-2xl"
             {...animate(0.2)}
           >
             <Image
