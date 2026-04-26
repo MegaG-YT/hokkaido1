@@ -205,7 +205,7 @@ export function RoomPlan() {
               </div>
             </div>
             {/* 免責文 — 右側のみ */}
-            <div className="absolute bottom-[470px] right-[calc(2%+130px)] z-10 w-[24%]">
+            <div className="absolute bottom-[520px] right-[calc(2%+130px)] z-10 w-[24%]">
               <p
                 className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
