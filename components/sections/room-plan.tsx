@@ -132,7 +132,7 @@ export function RoomPlan() {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-[400px] left-1/2 -translate-x-1/2 z-10">
+            <div className="absolute bottom-[340px] left-1/2 -translate-x-1/2 z-10">
               <span
                 className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
