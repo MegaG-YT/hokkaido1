@@ -25,18 +25,11 @@ export function RoomPlan() {
 
         {/* A棟 */}
         <div>
+          {/* Stats bar */}
           <div
-            className="flex items-center gap-4 md:gap-6 px-4 md:px-8 py-4 md:py-5 mb-0"
+            className="flex items-center gap-4 md:gap-6 px-4 md:px-8 py-4 md:py-5"
             style={{ background: "transparent" }}
           >
-            {/* 区画 + A棟 box */}
-            <div className="flex items-center gap-2 md:gap-3 shrink-0">
-              <span className="text-white/70 text-[10px] md:text-xs tracking-widest" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
-              <div className="bg-white px-3 md:px-5 py-1.5 md:py-2">
-                <span className="text-3xl md:text-5xl font-bold text-[#1b3a6b]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>A棟</span>
-              </div>
-            </div>
-
             {/* 建物面積 */}
             <div className="flex items-center gap-2 md:gap-4">
               <div className="border border-white/50 px-2 py-1 text-center">
@@ -62,14 +55,24 @@ export function RoomPlan() {
               </span>
             </div>
           </div>
-          <Image
-            src="/images/room-plan-a.webp"
-            alt="ROOM PLAN A - 間取り図"
-            width={1321}
-            height={1634}
-            className="mx-auto h-auto w-full"
-            sizes="(max-width: 768px) 100vw, 1024px"
-          />
+
+          {/* Image with A棟 box overlapping top */}
+          <div className="relative">
+            <div className="absolute top-4 left-4 md:left-8 z-10 flex items-center gap-2 md:gap-3">
+              <span className="text-white/70 text-[10px] md:text-xs tracking-widest" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
+              <div className="bg-white px-3 md:px-5 py-1.5 md:py-2">
+                <span className="text-3xl md:text-5xl font-bold text-[#1b3a6b]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>A棟</span>
+              </div>
+            </div>
+            <Image
+              src="/images/room-plan-a.webp"
+              alt="ROOM PLAN A - 間取り図"
+              width={1321}
+              height={1634}
+              className="mx-auto h-auto w-full"
+              sizes="(max-width: 768px) 100vw, 1024px"
+            />
+          </div>
         </div>
 
         {/* 完成予想バース label */}
