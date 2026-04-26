@@ -132,7 +132,13 @@ export function RoomPlan() {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-[360px] left-1/2 -translate-x-1/2 z-10">
+            <div className="absolute bottom-[360px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 w-[90%]">
+              <p
+                className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+              >
+                ※掲載の間取り図は、計画段階の図面を基に描き起こしたもので、実際とは異なる場合があります。家具・備品等は演出用のイメージであり、販売価格には含まれません。掲載の面積は登記簿面積と異なる場合があります。日照・通風・眺望は、季節・時刻・周辺環境により異なります。また、駐車場に記載の車両はイメージであり、販売価格には含まれません。実際の駐車可能車種・サイズには制限があり、道路幅員や車両の形状等により駐車できない場合があります。
+              </p>
               <span
                 className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
