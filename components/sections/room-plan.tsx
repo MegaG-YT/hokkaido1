@@ -18,7 +18,7 @@ export function RoomPlan() {
           {/* Image with A棟 + 建物面積 + 区画面積 + 間取図 overlapping */}
           <div className="relative">
             {/* 間取図 label — ~150px below A棟 (top-8 = 32px) */}
-            <div className="absolute top-[182px] left-1/2 -translate-x-1/2 z-10">
+            <div className="absolute top-[162px] left-1/2 -translate-x-1/2 z-10">
               <span
                 className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
