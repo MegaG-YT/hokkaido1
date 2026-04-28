@@ -76,9 +76,9 @@ export function LotInformation() {
               <tbody>
                 {SALE_LOTS.map((lot) => (
                   <tr key={lot.no} className="bg-white/80 text-[var(--brand-text)]">
-                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.no}</td>
-                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.area}</td>
-                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.price}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300 whitespace-nowrap">{lot.no}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300 whitespace-nowrap">{lot.area}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300 whitespace-nowrap">{lot.price}</td>
                   </tr>
                 ))}
               </tbody>
