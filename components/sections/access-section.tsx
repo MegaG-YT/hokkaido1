@@ -27,7 +27,7 @@ const TRANSPORT_ROWS: TransportRow[] = [
         icon: Footprints,
         label: "徒歩",
         details: [
-          "福島交通飯坂線「岩代清水」駅　徒歩3～4分（約180～260m）",
+          "福島交通飯坂線「岩代清水」駅　徒歩4分（約200～270m）",
         ],
       },
       {
@@ -47,7 +47,7 @@ const TRANSPORT_ROWS: TransportRow[] = [
         icon: Car,
         label: "自動車",
         details: [
-          "西道路まで車で約5分（約570～650m）",
+          "西道路まで車で約5分（約580～650m）",
           "JR「福島」駅まで約3.0km（車で約10分）",
         ],
       },
