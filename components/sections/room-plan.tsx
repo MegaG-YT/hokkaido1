@@ -43,8 +43,8 @@ export function RoomPlan() {
         <Image
           src="/images/room-plan-b.webp"
           alt="ROOM PLAN B - 間取り図"
-          width={1654}
-          height={2339}
+          width={1320}
+          height={1681}
           className="mx-auto h-auto w-full"
           sizes="(max-width: 768px) 100vw, 1024px"
         />
