@@ -12,9 +12,9 @@ const SALE_LOTS = [
 ]
 
 const BUILDING_LOTS = [
-  { no: "A棟", building: "99.34㎡（30.05坪）", area: "227.24㎡（68.74坪）" },
-  { no: "B棟", building: "100.98㎡(30.54坪）", area: "183.89㎡(55.62坪）" },
-  { no: "C棟", building: "97.48㎡(29.48坪）", area: "180.81㎡(54.69坪）" },
+  { no: "A棟", building: "90.65㎡（27.42坪）", area: "174.02㎡（52.64坪）" },
+  { no: "B棟", building: "99.75㎡（30.17坪）", area: "212.33㎡（64.22坪）" },
+  { no: "C棟", building: "100.33㎡（30.34坪）", area: "246.75㎡（74.64坪）" },
 ]
 
 export function LotInformation() {
