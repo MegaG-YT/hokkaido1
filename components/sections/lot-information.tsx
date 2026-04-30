@@ -112,8 +112,8 @@ export function LotInformation() {
             <Image
               src="/images/lot-plan-new.webp"
               alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
-              width={2918}
-              height={4434}
+              width={1125}
+              height={1382}
               className="h-auto w-full"
               sizes="(max-width: 768px) 100vw, 672px"
             />
