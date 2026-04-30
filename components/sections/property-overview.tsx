@@ -113,6 +113,7 @@ export function PropertyOverview() {
               <div>
                 <p>販売開始予定時期：2026年6月</p>
                 <p>本物件は本広告を行うまでは、契約または予約の申込みに一切応じられません。また、申込み順位の確保に応じる処置も講じられません。</p>
+                <p>本広告は、当該物件のホームページで行う予定です。（掲載時期：2026年6月）記載URLは<a href="https://www.heim-tohoku.co.jp/es/izumi/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">https://www.heim-tohoku.co.jp/es/izumi/</a>となります。</p>
               </div>
 
               {/* 情報更新日 */}
